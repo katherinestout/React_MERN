@@ -5,11 +5,50 @@ const isEmpty =require('./is-empty');
 module.exports = function validateRegisterInput(data){
     let errors = {};
 
+ //name/any validator pt 1 check 
+ //we don't want the name/any to be empty
+ //first need it to be an empty string
+ //if it's not empty its going to be what it is (data.name), if not it's going to be an empty string (then go to part 2)
+    data.name = !isEmpty(data.name) ? data.name : '';
+    data.email = !isEmpty(data.email) ? data.email : '';
+    data.password = !isEmpty(data.password) ? data.password : '';
+    data.password2 = !isEmpty(data.password2) ? data.password2 : '';
+
     if(!Validator.isLength(data.name, {min: 2, max: 30})){
         errors.name = 'Name must be between 2 to 30 characters';
     }
-    return{
-        errors,
-        isValid: isEmpty(errors)
-    };
+//name/any validator pt 2 check
+    
+  if (Validator.isEmpty(data.name)) {
+    errors.name = 'Name field is required';
+  }
+
+  if (Validator.isEmpty(data.email)) {
+    errors.email = 'Email field is required';
+  }
+
+  if (!Validator.isEmail(data.email)) {
+    errors.email = 'Email is invalid';
+  }
+
+  if (Validator.isEmpty(data.password)) {
+    errors.password = 'Password field is required';
+  }
+
+  if (!Validator.isLength(data.password, { min: 6, max: 30 })) {
+    errors.password = 'Password must be at least 6 characters';
+  }
+
+  if (Validator.isEmpty(data.password2)) {
+    errors.password2 = 'Confirm Password field is required';
+  }
+
+  if (!Validator.equals(data.password, data.password2)) {
+    errors.password2 = 'Passwords must match';
+  }
+
+  return {
+    errors,
+    isValid: isEmpty(errors)
+  };
 };
