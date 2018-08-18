@@ -97,7 +97,13 @@ bcrypt.compare(password, user.password).then(isMatch => {
 });
 
 //route GET request to api/users/current
+//creating a protected route
 //returns current user
 //PRIVATE access
+
+router.get('/current', passport.authenticate('jwt', {session: false}), (req, res) => {
+res.json(req.user);
+});
+
 
 module.exports = router;
