@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const keys = require('../../config/keys');
+const passport = require('passport');
 
 //get user model
 const User = require('../../models/User');
@@ -95,5 +96,8 @@ bcrypt.compare(password, user.password).then(isMatch => {
     });
 });
 
+//route GET request to api/users/current
+//returns current user
+//PRIVATE access
 
 module.exports = router;
