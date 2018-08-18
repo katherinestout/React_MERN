@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const passport = require('passport');
 
 //routes
 const posts = require('./routes/api/posts');
@@ -19,7 +20,12 @@ const db = require('./config/keys').mongoURI;
 //connecting to MongoDB by using Mongoose
 mongoose.connect(db).then(() => console.log('MongoDB is Connected!')).catch(err => console.log(err));
 
-app.get('/', (req, res) => res.send('Hello'));
+//app.get('/', (req, res) => res.send('Hello'));
+
+//Passport Middleware
+app.use(passport.initialize());
+//Passport Config, jwt strategy
+require('./config/passport')(passport);
 
 //use routes
 app.use('/api/users', users);

@@ -71,7 +71,7 @@ bcrypt.compare(password, user.password).then(isMatch => {
         if(isMatch){
            //user matched
            //jwt payload
-            const payload = { id: user.id, name: user.name}
+            const payload = { id: user.id, name: user.name};
 
            //sign token
            //secret key from keys file
@@ -84,7 +84,8 @@ bcrypt.compare(password, user.password).then(isMatch => {
                         token: 'Bearer ' + token
                     });
                 
-            } );
+            } 
+        );
 //if password doesn't match...
         } else {
             return res.status(400).json({password: 'Password is incorrect'});
