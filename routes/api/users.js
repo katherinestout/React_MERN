@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const keys = require('../../config/keys');
 
 //get user model
 const User = require('../../models/User');
@@ -66,10 +67,24 @@ User.findOne({email})
 
     }
 //checking password in the db
-bcrypt.compare(password, user.password)
-    .then(isMatch => {
+bcrypt.compare(password, user.password).then(isMatch => {
         if(isMatch){
-            res.json({msg: 'Yay! Success!'});
+           //user matched
+           //jwt payload
+            const payload = { id: user.id, name: user.name}
+
+           //sign token
+           //secret key from keys file
+           jwt.sign(payload, 
+            keys.secretOrKey, 
+            {expiresIn: 3600}, 
+                (err, token) => {
+                    res.json({
+                        sucess: true,
+                        token: 'Bearer ' + token
+                    });
+                
+            } );
 //if password doesn't match...
         } else {
             return res.status(400).json({password: 'Password is incorrect'});
