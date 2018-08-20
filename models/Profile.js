@@ -12,10 +12,8 @@ handle: {
     required: true,
     max: 40,  
 },
-    age: {
-        type: Date,
-    },
-    eczema: {
+   
+    instagram: {
         type: String,
     },
     name:{
