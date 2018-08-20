@@ -10,14 +10,12 @@ user:{
 handle: {
     type: String,
     required: true,
-    max: 40,  
+    max: 40
 },
    
     instagram: {
         type: String,
-    },
-    name:{
-        type: String
+        //required: true
     }
     
 });
