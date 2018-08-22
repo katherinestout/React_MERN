@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+
 
 class Register extends Component {
     constructor(){
@@ -12,6 +14,8 @@ class Register extends Component {
             errors: {}
 
         };
+
+
         //you need this below to pass the onchange to every input
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -32,12 +36,17 @@ class Register extends Component {
             email: this.state.email,
             password: this.state.password,
             password2: this.state.password2
-        }
-        console.log(newUser);
+        };
+        //console.log(newUser);
+        axios.post('/api/users/register', newUser)
+        .then(res => console.log(res.data))
+        .catch(err => console.log({errors: err.response.data}));
 
     }
 
   render() {
+     
+
     return (
  
     <div className="register">
