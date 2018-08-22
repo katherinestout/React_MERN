@@ -6,7 +6,7 @@ const initialstate = {};
 
 const middleware = [thunk];
 
-//first param is route reducer
+
 
 const store = createStore(
     rootReducer, initialstate, 
