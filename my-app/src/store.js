@@ -12,6 +12,7 @@ const store = createStore(
     rootReducer, initialstate, 
     compose(
     applyMiddleware(...middleware),
+    //remove the line below to make it work on all browsers
    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
 )
