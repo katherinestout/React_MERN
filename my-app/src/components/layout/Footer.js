@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
+//import { Link } from 'react-router-dom';
 
-export default () => {
-    return(
-        <footer className= "text-center">
-        <h1> footer </h1>
-            </footer>
-    );
-};
+
+export default class Footer extends Component {
+    render() {
+      return (
+        <div>
+          <h1> Footer </h1>
+  
+        </div>
+      );
+    };
+  };
+  
