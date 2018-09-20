@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default class Landing extends Component {
   render() {
     return (
-      <div className="landing jumbotron">
+      <div className="landing ">
         <div className="container">
         <div className="row">
         <div className="col-sm-12">
@@ -13,7 +13,7 @@ export default class Landing extends Component {
        </div>
        <div className="row">
        <div className="col-sm-12">
-       <h3>Generate Captions for Instagram and Snapchat!</h3>
+       <h3>Generate Unique Captions for Instagram!</h3>
        </div>
        </div>
        <div className="row">

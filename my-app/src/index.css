@@ -11,8 +11,20 @@ body {
 .navbar {
   padding: 20px;
 }
+.navlinks{
+  display: flex;
+  justify-content: right;
+}
 
 .landing{
-  margin-top: 300px;
+  margin-top: 200px;
+  text-align: center;
+}
+.btn{
+  margin: 5px;
+}
+
+.footer{
+  text-align: center;
 }
 
