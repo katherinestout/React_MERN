@@ -7,10 +7,17 @@ export default class Footer extends Component {
       return (
         <div>
         
-<footer className="footer sticky">
-  <div className="container">
-<a href="https://www.github.com/katherinestout" class="link"> 
- &copy; Katherine Stout </a> 
+<footer className="fixed-bottom">
+<div className="container">
+
+
+<a href="https://www.github.com/katherinestout"> 
+ <i class="fab fa-github"></i>
+ </a>
+ &copy;
+  Katherine Stout
+ 
+
 </div>
 </footer>
 </div>

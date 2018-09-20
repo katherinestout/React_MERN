@@ -1,5 +1,18 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+.cap{
+  font-family: 'Coiny', cursive;
+}
+
+.navbar {
+  padding: 20px;
+}
+
+.landing{
+  margin-top: 300px;
+}
+
