@@ -10,7 +10,7 @@ export default class Footer extends Component {
 <footer className="fixed-bottom footer">
 <div className="container">
 <a href="https://www.github.com/katherinestout"> 
- <i class="fab fa-github"></i>
+ <i className="fab fa-github"></i>
  </a>
  &copy;
   Katherine Stout
