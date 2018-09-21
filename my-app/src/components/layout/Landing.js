@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
   render() {
     return (
       <div className="landing ">
-        <div className="container">
+        <div className="container  jumbotron">
         <div className="row">
         <div className="col-sm-12">
         <h2 className="cap"> Welcome to CleverCap </h2>

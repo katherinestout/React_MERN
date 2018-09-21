@@ -16,27 +16,37 @@ class Navbar extends Component {
     const {isAuthenticated, user} = this.props.auth;
 
     const guestLinks = (
-    
     <div>
+      
+      <ul className="navbar-nav">
+      <li className="nav-item">
       <Link className = "nav-link" to = "/register">Sign Up</Link>
+      </li>
+      <li className="nav-item">
       <Link className = "nav-link" to = "/login">Login</Link>
+      </li>
+      </ul>
+   
       </div>
+      
+ 
     );
 
     const authLinks = (
+      <nav>
         <ul className="navbar-nav">
         <li className="nav-item">
         <a href = "" onClick={this.onLogoutClick.bind(this)}>Logout</a>
         {user.name}
         </li>
         </ul>
+        </nav>
     );
 
     return (
     <div>
     <nav className="navbar navbar-default fixed-top">
      <h1 className="cap"><i className="far fa-comment"></i>CleverCap</h1>
-     
       <ul className="navbar-nav">
         <li className="nav-item">
       <Link className = "nav-link" to = "/profiles">

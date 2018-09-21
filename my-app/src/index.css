@@ -8,9 +8,7 @@ body {
   font-family: 'Coiny', cursive;
 }
 
-.navbar {
-  padding: 20px;
-}
+
 
 .navbar-default{
   background-color: lightskyblue;
@@ -23,14 +21,18 @@ body {
 
 .landing{
   margin-top: 200px;
-  text-align: center;
+  text-align: center; 
+}
+
+.jumbotron{
+  background-color: lightskyblue;
 }
 .btn{
   margin: 5px;
-  
 }
 
 .footer{
   text-align: center;
+  background-color: lightskyblue;
 }
 
