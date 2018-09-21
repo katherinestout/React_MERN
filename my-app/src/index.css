@@ -1,31 +1,28 @@
 body {
+  
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
 .cap{
   font-family: 'Coiny', cursive;
 }
 
-
-
 .navbar-default{
   background-color: lightskyblue;
-}
-.navlinks{
-  display: flex;
-  justify-content: right;
-  
+  margin-bottom: 200px;
 }
 
 .landing{
-  margin-top: 200px;
   text-align: center; 
 }
 
 .jumbotron{
   background-color: lightskyblue;
+  width: 50%;
+  border-radius: 70px;
 }
 .btn{
   margin: 5px;
@@ -34,5 +31,6 @@ body {
 .footer{
   text-align: center;
   background-color: lightskyblue;
+  padding: 20px;
 }
 

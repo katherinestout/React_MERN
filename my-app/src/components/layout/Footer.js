@@ -12,7 +12,7 @@ export default class Footer extends Component {
 <a href="https://www.github.com/katherinestout"> 
  <i className="fab fa-github"></i>
  </a>
- &copy;
+
   Katherine Stout
  
 
