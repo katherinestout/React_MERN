@@ -11,9 +11,14 @@ body {
 .navbar {
   padding: 20px;
 }
+
+.navbar-default{
+  background-color: lightskyblue;
+}
 .navlinks{
   display: flex;
   justify-content: right;
+  
 }
 
 .landing{
@@ -22,6 +27,7 @@ body {
 }
 .btn{
   margin: 5px;
+  
 }
 
 .footer{

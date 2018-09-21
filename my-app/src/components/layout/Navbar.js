@@ -34,7 +34,7 @@ class Navbar extends Component {
 
     return (
     <div>
-    <nav className="navbar navbar-light bg-light fixed-top">
+    <nav className="navbar navbar-default fixed-top">
      <h1 className="cap"><i className="far fa-comment"></i>CleverCap</h1>
      
       <ul className="navbar-nav">
