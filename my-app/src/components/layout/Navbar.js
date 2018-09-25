@@ -33,6 +33,9 @@ class Navbar extends Component {
         <li className="nav-item">
         {user.name}
         <a href = "" onClick={this.onLogoutClick.bind(this)}>Logout</a>
+        <Link className = "nav-link" to = "/profiles" >
+      {''}
+      Profile</Link>
         </li>
         </ul>
         </nav>    
@@ -44,9 +47,7 @@ class Navbar extends Component {
      <h1 className="cap"><i className="far fa-comment"></i>CleverCap</h1>
       <ul className="navbar-nav">
         <li className="nav-item">
-      <Link className = "nav-link" to = "/profiles" >
-      {''}
-      Profile</Link>
+    
       </li>
      
       </ul>
