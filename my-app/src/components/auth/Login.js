@@ -10,7 +10,7 @@ class Login extends Component {
     this.state = {
       email: '',
       password: '',
-      errors: {},
+      errors: {}
     };
 
     this.onChange = this.onChange.bind(this);
@@ -56,15 +56,15 @@ class Login extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Log In</h1>
-              <p className="lead text-center">
-                Sign in to your Account
+              <h1 className="cap">Log In</h1>
+              <p className="heading">
+                Log In to your Account
               </p>
               <form onSubmit={this.onSubmit}>
                 <div className="form-group">
                   <input
                     type="email"
-                    className={classnames('form-control form-control-lg', {
+                    className={classnames('form-control', {
                       'is-invalid': errors.email
                     })}
                     placeholder="Email Address"
@@ -79,7 +79,7 @@ class Login extends Component {
                 <div className="form-group">
                   <input
                     type="password"
-                    className={classnames('form-control form-control-lg', {
+                    className={classnames('form-control', {
                       'is-invalid': errors.password
                     })}
                     placeholder="Password"
@@ -91,7 +91,7 @@ class Login extends Component {
                     <div className="invalid-feedback">{errors.password}</div>
                   )}
                 </div>
-                <input type="submit" className="btn btn-info btn-block mt-4" />
+                <input type="submit" className="btn btn-light btn-block" />
               </form>
             </div>
           </div>

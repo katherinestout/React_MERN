@@ -57,15 +57,14 @@ class Register extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Sign Up</h1>
-              <p className="lead text-center">
-                Create an account
-              </p>
+              <h1 className="cap">Sign Up</h1>
+              <p className="heading">  Create a CleverCap account!</p>
+              
               <form noValidate onSubmit={this.onSubmit}>
                 <div className="form-group">
                   <input
                     type="text"
-                    className={classnames('form-control form-control-lg', {
+                    className={classnames('form-control', {
                       'is-invalid': errors.name
                     })}
                     placeholder="Name"
@@ -80,7 +79,7 @@ class Register extends Component {
                 <div className="form-group">
                   <input
                     type="email"
-                    className={classnames('form-control form-control-lg', {
+                    className={classnames('form-control', {
                       'is-invalid': errors.email
                     })}
                     placeholder="Email Address"
@@ -96,7 +95,7 @@ class Register extends Component {
                 <div className="form-group">
                   <input
                     type="password"
-                    className={classnames('form-control form-control-lg', {
+                    className={classnames('form-control', {
                       'is-invalid': errors.password
                     })}
                     placeholder="Password"
@@ -111,7 +110,7 @@ class Register extends Component {
                 <div className="form-group">
                   <input
                     type="password"
-                    className={classnames('form-control form-control-lg', {
+                    className={classnames('form-control', {
                       'is-invalid': errors.password2
                     })}
                     placeholder="Confirm Password"
@@ -123,7 +122,7 @@ class Register extends Component {
                     <div className="invalid-feedback">{errors.password2}</div>
                   )}
                 </div>
-                <input type="submit" className="btn btn-info btn-block mt-4" />
+                <input type="submit" className="btn btn-light btn-block" />
               </form>
             </div>
           </div>

@@ -15,13 +15,15 @@ import {connect} from 'react-redux';
        </div>
        <div className="row">
        <div className="col-sm-12">
-       <h3>Generate Unique Captions for Instagram!</h3>
+       <h3>Generate Unique Captions<br></br> for Instagram!</h3>
        </div>
        </div>
        <div className="row">
        <div className="col-sm-12">
-    <button type="button" className="btn btn-light"> <Link to = "/register">Sign Up</Link> </button>
-    <button type="button" className="btn btn-light"> <Link to = "/login">login</Link></button>
+
+    <Link to = "/register" className="btn btn-light">Sign Up</Link>
+
+    <Link to = "/login" className="btn btn-light">Log In</Link>
       </div>
       </div>
       </div>
