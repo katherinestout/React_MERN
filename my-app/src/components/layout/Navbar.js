@@ -20,8 +20,10 @@ class Navbar extends Component {
       <nav>
       <ul className="navbar-nav">
       <li className="nav-item">
-      <Link className = "nav-link" to = "/register">Sign Up</Link>
-      <Link className = "nav-link" to = "/login">Login</Link>
+  
+      <Link to = "/register" className="btn btn-outline-light">Sign Up</Link>
+      <Link to = "/login" className="btn btn-outline-light">Log In</Link>
+   
       </li>
       </ul>
       </nav>
@@ -32,8 +34,9 @@ class Navbar extends Component {
         <ul className="navbar-nav">
         <li className="nav-item">
         {user.name}
-        <a href = "" onClick={this.onLogoutClick.bind(this)}>Logout</a>
-        <Link className = "nav-link" to = "/profiles" >
+        <a href = "" onClick={this.onLogoutClick.bind(this)} className="btn btn-outline-light">
+        Logout</a>
+        <Link to = "/profiles"className = "btn btn-outline-light" >
       {''}
       Profile</Link>
         </li>

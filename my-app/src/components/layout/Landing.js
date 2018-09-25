@@ -21,9 +21,9 @@ import {connect} from 'react-redux';
        <div className="row">
        <div className="col-sm-12">
 
-    <Link to = "/register" className="btn btn-light">Sign Up</Link>
+    <Link to = "/register" className="btn btn-outline-light">Sign Up</Link>
 
-    <Link to = "/login" className="btn btn-light">Log In</Link>
+    <Link to = "/login" className="btn btn-outline-light">Log In</Link>
       </div>
       </div>
       </div>
