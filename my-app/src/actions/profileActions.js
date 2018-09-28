@@ -1,12 +1,12 @@
 import axios from 'axios';
-import {GET_PROFILE, PROFILE_LOADING, GET_ERRORS} from './types';
+import {GET_PROFILE, PROFILE_LOADING, GET_ERRORS, CLEAR_CURRENT_PROFILE} from './types';
 
 
 //get current profile
 //hits the api and gets the user profile
 export const getCurrentProfile = () => dispatch => {
     dispatch(setProfileLoading());
-    axios.get('./api/profile')
+    axios.get('/api/profile')
     .then(res => 
         dispatch({
             type: GET_PROFILE,
@@ -30,5 +30,13 @@ hey you need to create a profile
 export const setProfileLoading = () => {
     return {
         type: PROFILE_LOADING
+    }
+}
+
+
+//clear profile
+export const clearCurrentProfile = () => {
+    return {
+        type: CLEAR_CURRENT_PROFILE
     }
 }
