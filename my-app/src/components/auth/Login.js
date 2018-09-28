@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-//import classnames from 'classnames';
 import { loginUser } from '../../actions/authActions';
 import TextFieldGroup from '../common/TextFieldGroup';
+
 
 class Login extends Component {
   constructor() {
@@ -13,10 +13,13 @@ class Login extends Component {
       password: '',
       errors: {}
     };
-
+//binding "this" to onchange and onsubmit
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
+
+//componentDidMount is invoked immediately after you press submit
+//pushes to dashboard page if authenticated
 
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
@@ -24,10 +27,14 @@ class Login extends Component {
     }
   }
 
+//componentWillRecieveProps is recieving new props, when they are passed into component
+//update for the login component
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
       this.props.history.push('/dashboard');
     }
+    //if authenticated push to dashboard, if not then errors
 
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
@@ -49,6 +56,7 @@ class Login extends Component {
     this.setState({ [e.target.name]: e.target.value });
   }
 
+  
 render() {
     const { errors } = this.state;
 
@@ -88,15 +96,22 @@ error={errors.password}
   }
 }
 
+//Add the login to proptypes
+
 Login.propTypes = {
   loginUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
 };
 
+
+//mapStateToProps is a filter used to select which things from the store are required by the component
+//the selected things become the component properties
 const mapStateToProps = state => ({
   auth: state.auth,
   errors: state.errors
 });
 
+//The connect from Redux connects the mapStateToProps and the store
+//without connect, the mapStateToProps doesn't know where to "go"
 export default connect(mapStateToProps, { loginUser })(Login);
