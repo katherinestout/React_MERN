@@ -60,6 +60,9 @@ class Dashboard extends Component{
         );
     }
 }
+//PS everything will appear in  {dashboardContent} !
+
+
 //Bring in profile state and auth state
 //getCurrentProfile is a property, auth and profile are objects
 
