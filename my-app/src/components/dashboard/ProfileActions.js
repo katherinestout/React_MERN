@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom';
 const ProfileActions = () => {
   return (
     <div>
-       <button className= "btn btn-light"><Link to ="/edit-profile"></Link></button> 
-        <button className="btn btn-light"><Link to ="/add-quotes"></Link></button> 
+      <Link to ="/edit-profile">Edit Profile</Link>
+  
       
     </div>
   );

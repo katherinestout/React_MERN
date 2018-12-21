@@ -46,7 +46,7 @@ class Navbar extends Component {
         Logout</a>
         <Link to = "/profiles"className = "btn btn-outline-light" >
       {''}
-      Profile</Link>
+      Profiles</Link>
         </li>
         </ul>
         </nav>    

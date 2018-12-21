@@ -124,7 +124,14 @@ const profileFields = {};
 profileFields.user = req.user.id;
 if(req.body.handle) profileFields.handle = req.body.handle;
 //if(req.body.instagram) profileFields.handle = req.body.instagram;
-//if(req.body.name) profileFields.name = req.body.name;
+if(req.body.bio) profileFields.name = req.body.bio;
+
+//social
+profileFields.social = {};
+if (req.body.twitter) profileFields.social.twitter = req.body.twitter;
+if (req.body.instagram) profileFields.social.instagram = req.body.instagram;
+
+
 
 //search for user by id
 Profile.findOne({user: req.user.id})
