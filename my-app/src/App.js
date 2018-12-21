@@ -22,6 +22,7 @@ import CreateProfile from './components/create-profile/CreateProfile';
 
 import './App.css';
 import { clearCurrentProfile } from './actions/profileActions';
+import EditProfile from './components/edit-profile/EditProfile';
 
 //check for jwt token
 
@@ -67,8 +68,14 @@ class App extends Component {
       <PrivateRoute exact path ="/dashboard" component ={ Dashboard }/>
       </Switch>
       <Switch>
-      <PrivateRoute exact path ="/create-profile" component ={ CreateProfile }/>
+      <PrivateRoute exact path ="/create-profile"
+       component ={ CreateProfile }/>
       </Switch>
+
+      <Switch>
+      <PrivateRoute exact path ="/edit-profile" component ={ EditProfile }/>
+      </Switch>
+    
       </div>
    
       <Footer/> 
