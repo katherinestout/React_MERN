@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "my-app-install": "npm install --prefix my-app",
-    "start": "nodemon server.js",
-    "server": "nodemon server.js",
+    "start": "node server.js",
+    "server": "node server.js",
     "my-app": "npm start --prefix my-app",
     "dev": "concurrently \"npm run server\" \"npm run my-app\""
     
