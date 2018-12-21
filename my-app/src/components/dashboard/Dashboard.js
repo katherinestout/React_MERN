@@ -20,14 +20,14 @@ class Dashboard extends Component{
         //if profile is equal to null or loading is true
         if(profile === null || loading) {
             //if it is null:
-            dashboardContent = <h4>Loading...</h4>
+            dashboardContent = <h4>Loading...</h4>;
 
         } else {
     //Check if logged in user has profile data
        //object.keys gets key of profile object
        //if it is greater than 0 than that means there is already a profile created
            if(Object.keys(profile).length > 0){
-                dashboardContent = <h4>ya gotta DISPLAY PROFILE</h4>
+                dashboardContent = <h4>ya gotta DISPLAY PROFILE</h4>;
            } else {
         //user is logged in but has no profile
         dashboardContent = (
@@ -40,7 +40,7 @@ class Dashboard extends Component{
                 Create a Profile!
                 </Link>
             </div>
-        )
+        );
            }
         }
         return(

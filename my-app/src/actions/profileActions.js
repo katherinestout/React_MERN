@@ -1,5 +1,8 @@
 import axios from 'axios';
-import {GET_PROFILE, PROFILE_LOADING, CLEAR_CURRENT_PROFILE, GET_ERRORS} from './types';
+import {GET_PROFILE, 
+    PROFILE_LOADING, 
+    CLEAR_CURRENT_PROFILE, 
+    GET_ERRORS} from './types';
 
 
 //get current profile
@@ -13,11 +16,6 @@ export const getCurrentProfile = () => dispatch => {
             payload: res.data
         })
         )
-/*
-the reason for this (.catch) is that you can register as a user and 
-not have a profile ,if it is empty we want it to have a button that says 
-hey you need to create a profile 
-*/
         .catch(err =>
             dispatch({
                 type: GET_PROFILE,
@@ -28,16 +26,17 @@ hey you need to create a profile
 
 //Create Profile
 
+// Create Profile
 export const createProfile = (profileData, history) => dispatch => {
-    axios
+  axios
     .post('/api/profile', profileData)
     .then(res => history.push('/dashboard'))
-    .catch(err => 
-        dispatch ({
-            type: GET_ERRORS,
-            payload: err.response.data
-        })
-        );
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
 };
 
 //Profile Loading

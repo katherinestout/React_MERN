@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import InputGroup from '../common/InputGroup';
 //import SelectListGroup from '../common/SelectListGroup';
-import {createProfile} from '../../actions/profileActions';
+import { createProfile } from '../../actions/profileActions';
 
 
 export class CreateProfile extends Component {
@@ -29,14 +29,14 @@ export class CreateProfile extends Component {
 
     componentWillRecieveProps(nextProps){
         if(nextProps.errors) {
-            this.setState({errors: nextProps.errors})
+            this.setState({errors: nextProps.errors});
         }
     }
-
 
     onSubmit(e){
         e.preventDefault();
       const profileData = {
+
         handle: this.state.handle,
         bio: this.state.bio,
         twitter: this.state.twitter,
@@ -44,7 +44,7 @@ export class CreateProfile extends Component {
 
       }
 
-      this.props.createProfile(profileData, this.props.history)
+      this.props.createProfile(profileData, this.props.history);
 
     }
     onChange(e){
@@ -114,11 +114,16 @@ export class CreateProfile extends Component {
         info="A little about yourself"
         />
         <div className="mb-3">
-        <button onClick = {() => {
+
+        <button 
+        type = "button"
+        onClick = {() => {
             this.setState(prevState => ({
                 displaySocialInputs: !prevState.displaySocialInputs
-            }))
-        }} className="btn btn-light">
+            }));
+        }} 
+        className="btn btn-light"
+        >
         Add Social Network Links
          </button>
          <span className="text-muted">Optional</span>
@@ -142,11 +147,13 @@ export class CreateProfile extends Component {
 CreateProfile.propTypes = {
     profile: PropTypes.object.isRequired,
     errors: PropTypes.object.isRequired
-};
-
-const mapStateToProps = state => ({
+  };
+  
+  const mapStateToProps = state => ({
     profile: state.profile,
     errors: state.errors
-});
-
-export default connect(mapStateToProps, {createProfile})(withRouter(createProfile));
+  });
+  
+  export default connect(mapStateToProps, { createProfile })(
+    withRouter(CreateProfile)
+  );

@@ -1,4 +1,7 @@
-import {GET_PROFILE, PROFILE_LOADING, CLEAR_CURRENT_PROFILE} from '../actions/types';
+import {GET_PROFILE, 
+    PROFILE_LOADING, 
+    CLEAR_CURRENT_PROFILE} 
+    from '../actions/types';
 
 
 
@@ -7,7 +10,7 @@ const initialState = {
     profile: null,
     profiles: null,
     loading: false
-}
+};
 
 export default function( state = initialState, action){
     //switch statement based on type
@@ -22,7 +25,7 @@ switch(action.type) {
     //payload will be empty and get set to that user
     //if there is no profile yet, will be able to create a profile
     case GET_PROFILE:
-    return{
+    return {
         ...state,
         profile: action.payload,
         loading: false

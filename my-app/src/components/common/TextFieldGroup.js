@@ -55,13 +55,13 @@ TextFieldGroup.propTypes = {
     onChange: PropTypes.func.isRequired,
     disabled: PropTypes.string
 
-}
+};
 
 //default props, (if we don't pass it in what will happen? anything else will be false/null
 //if not passed in)
 
 TextFieldGroup.defaultProps = {
     type: 'text'
-}
+};
 
 export default TextFieldGroup;
