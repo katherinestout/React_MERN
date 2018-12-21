@@ -12,8 +12,7 @@ import {GET_PROFILE,
 export const getCurrentProfile = () => dispatch => {
     dispatch(setProfileLoading());
     axios.get('/api/profile')
-    .then(res => 
-        dispatch({
+    .then(res => dispatch({
             type: GET_PROFILE,
             payload: res.data
         })
@@ -50,7 +49,7 @@ export const deleteAccount = () => dispatch => {
         .then(res =>
           dispatch({
             type: SET_CURRENT_USER,
-            payload: {}
+            payload: ''
           })
         )
         .catch(err =>

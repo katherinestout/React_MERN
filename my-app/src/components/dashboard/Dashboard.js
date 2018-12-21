@@ -37,6 +37,10 @@ class Dashboard extends Component{
                             
                         <Link to ={`/profile/${profile.handle}`}>
                         {user.name}</Link></p>
+                        {profile.handle}
+                        {profile.bio}
+                        {profile.instagram}
+                        {profile.twitter}
 
                         <ProfileActions/>
 

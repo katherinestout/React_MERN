@@ -12,10 +12,17 @@ handle: {
     required: true,
     max: 40
 },
-   
-    instagram: {
-        type: String,
-        //required: true
+bio: {
+    type: String
+},
+ social: {
+     twitter: {
+         type: String
+     },
+     instagram: {
+         type: String
+     }
+
     }
     
 });
