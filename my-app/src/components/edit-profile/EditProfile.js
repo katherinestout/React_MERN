@@ -9,7 +9,7 @@ import { createProfile, getCurrentProfile } from '../../actions/profileActions';
 import isEmpty from '../../validation/is-empty';
 //import { withRouter } from 'react-router';
 
-export class CreateProfile extends Component {
+export class EditProfile extends Component {
 
     constructor(props){
         super(props);
@@ -164,15 +164,15 @@ export class CreateProfile extends Component {
         </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-CreateProfile.propTypes = {
+EditProfile.propTypes = {
     createProfile: PropTypes.func.isRequired,
     getCurrentProfile: PropTypes.func.isRequired,
     profile: PropTypes.object.isRequired,
-    errors: PropTypes.object.isRequired
+    
   };
   
   const mapStateToProps = state => ({
@@ -181,4 +181,5 @@ CreateProfile.propTypes = {
   });
 
   export default connect(mapStateToProps, { createProfile, getCurrentProfile })(
-      withRouter(CreateProfile));
+    withRouter(EditProfile)
+  );

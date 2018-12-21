@@ -14,6 +14,17 @@ if(Validator.isEmpty(data.handle)) {
 }
 
 
+if(Validator.isEmpty(data.bio)) {
+    errors.bio ="Profile bio is required!";
+}
+
+
+if(!isEmpty(data.twitter)) {
+    if(!Validator.isURL(data.twitter)){
+    errors.twitter ="Not a valid URL!";
+    }
+}
+
 
 if(!isEmpty(data.instagram)) {
     if(!Validator.isURL(data.instagram)){

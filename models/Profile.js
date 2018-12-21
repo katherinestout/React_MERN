@@ -13,7 +13,8 @@ handle: {
     max: 40
 },
 bio: {
-    type: String
+    type: String,
+    required: true,
 },
  social: {
      twitter: {
