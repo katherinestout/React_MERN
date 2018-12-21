@@ -27,7 +27,7 @@ export class CreateProfile extends Component {
     }
 
 
-    componentWillRecieveProps(nextProps){
+    componentWillReceiveProps(nextProps){
         if(nextProps.errors) {
             this.setState({errors: nextProps.errors});
         }
