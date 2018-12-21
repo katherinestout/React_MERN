@@ -33,15 +33,19 @@ class Dashboard extends Component{
            if(Object.keys(profile).length > 0){
                 dashboardContent = (
                     <div>
-                        <p>Welcome <Link to ={`/profile/${profile.handle}`}>
+                        <p>Welcome 
+                            
+                        <Link to ={`/profile/${profile.handle}`}>
                         {user.name}</Link></p>
-                        <ProfileActions
-                        />
-                        {/* Todo exp and education*/}
-                        <button onClick={this.onDeleteClick.bind(this)} className="btn btn-danger">
+
+                        <ProfileActions/>
+
+                      
+                        <button onClick={this.onDeleteClick.bind(this)} 
+                        className="btn btn-danger">
                         Delete Account</button>
                     </div>
-                )
+                );
            } else {
         //user is logged in but has no profile
         dashboardContent = (
@@ -49,7 +53,7 @@ class Dashboard extends Component{
                 <p className="lead text-muted">
                 Welcome {user.name}
                 </p>
-                <p>Ya gotta set up a profile so add some info</p>
+                <p>Please set up your profile!</p>
                 <Link to ="/create-profile" className="btn btn-dark">
                 Create a Profile!
                 </Link>

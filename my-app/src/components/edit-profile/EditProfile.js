@@ -1,19 +1,20 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-//import { withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import InputGroup from '../common/InputGroup';
 import { createProfile, getCurrentProfile } from '../../actions/profileActions';
 import isEmpty from '../../validation/is-empty';
+//import { withRouter } from 'react-router';
 
 export class CreateProfile extends Component {
 
     constructor(props){
         super(props);
         this.state = {
-            
+            displaySocialInputs: false,
             handle: '',
             bio: '',
             twitter: '',
@@ -42,8 +43,10 @@ export class CreateProfile extends Component {
 
             profile.bio = !isEmpty(profile.bio) ? profile.bio : '';
             profile.social = !isEmpty(profile.social) ? profile.social : {};
+
             profile.twitter = !isEmpty(profile.social.twitter) ? profile.social.twitter : '';
-            profile.instagram= !isEmpty(profile.social.instagram) ? profile.social.instagram : '';
+            profile.instagram= !isEmpty(profile.social.instagram) ? 
+                    profile.social.instagram : '';
         
         //set component fields state
         this.setState({
@@ -66,7 +69,7 @@ export class CreateProfile extends Component {
         twitter: this.state.twitter,
         instagram: this.state.instagram
 
-      }
+      };
 
       this.props.createProfile(profileData, this.props.history);
 
@@ -104,7 +107,7 @@ export class CreateProfile extends Component {
 
         
             </div>
-        )
+        );
       } 
 
     
@@ -153,7 +156,7 @@ export class CreateProfile extends Component {
 
         {socialInputs}
         <input type = "submit"
-            value="submit"
+            value="Submit"
             className="btn btn-info btn-block mt-4"/>
 
         </form>
@@ -178,5 +181,4 @@ CreateProfile.propTypes = {
   });
 
   export default connect(mapStateToProps, { createProfile, getCurrentProfile })(
-   (CreateProfile)
-  );
+      withRouter(CreateProfile));

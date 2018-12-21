@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {GET_PROFILE, 
+   // GET_PROFILES,
     PROFILE_LOADING, 
     CLEAR_CURRENT_PROFILE, 
     GET_ERRORS,
@@ -16,8 +17,7 @@ export const getCurrentProfile = () => dispatch => {
             type: GET_PROFILE,
             payload: res.data
         })
-        )
-        .catch(err =>
+        ).catch(err =>
             dispatch({
                 type: GET_PROFILE,
                 payload: {}
@@ -29,16 +29,18 @@ export const getCurrentProfile = () => dispatch => {
 
 // Create Profile
 export const createProfile = (profileData, history) => dispatch => {
-  axios
-    .post('/api/profile', profileData)
-    .then(res => history.push('/dashboard'))
-    .catch(err =>
-      dispatch({
-        type: GET_ERRORS,
-        payload: err.response.data
-      })
-    );
-};
+    axios
+      .post('/api/profile', profileData)
+      .then(res => history.push('/dashboard'))
+      .catch(err =>
+        dispatch({
+          type: GET_ERRORS,
+          payload: err.response.data
+        })
+      );
+  };
+
+
 
 // Delete account & profile
 export const deleteAccount = () => dispatch => {
