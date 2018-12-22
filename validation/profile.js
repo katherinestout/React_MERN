@@ -6,6 +6,8 @@ module.exports = function validateProfileInput(data){
     let errors = {};
 
 data.handle = !isEmpty(data.handle) ? data.handle : '';
+data.bio = !isEmpty(data.bio) ? data.bio : '';
+
 //data.instagram = !isEmpty(data.instagram) ? data.instagram : '';
 //data.name = !isEmpty(data.name) ? data.name : '';
 
