@@ -24,6 +24,8 @@ import './App.css';
 import { clearCurrentProfile } from './actions/profileActions';
 import EditProfile from './components/edit-profile/EditProfile';
 
+import MainQuotes from './components/main-quotes/MainQuotes';
+
 //check for jwt token
 
 if(localStorage.jwtToken) {
@@ -66,6 +68,11 @@ class App extends Component {
 
       <Switch>
       <PrivateRoute exact path ="/dashboard" component ={ Dashboard }/>
+      </Switch>
+
+      <Switch>
+      <PrivateRoute exact path ="/main-quotes" 
+      component ={ MainQuotes }/>
       </Switch>
       
       <Switch>

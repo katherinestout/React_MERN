@@ -39,6 +39,9 @@ class Navbar extends Component {
           <Link className="nav-link" to="/dashboard">
             Dashboard
           </Link>
+          <Link className="nav-link" to="/main-quotes">
+            Main Quotes
+          </Link>
         </li>
         <li className="nav-item">
         {user.name}
@@ -46,8 +49,12 @@ class Navbar extends Component {
         Logout</a>
         <Link to = "/profiles"className = "btn btn-outline-light" >
       {''}
-      Profiles</Link>
+      Users</Link>
         </li>
+        <li className="nav-item">
+        
+        </li>
+
         </ul>
         </nav>    
     );
