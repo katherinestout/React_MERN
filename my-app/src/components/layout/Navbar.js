@@ -6,6 +6,14 @@ import {logoutUser} from '../../actions/authActions';
 import {clearCurrentProfile} from '../../actions/profileActions';
 
 
+/* 
+
+        <Link to = "/profiles"className = "btn btn-outline-light" >
+      {''}
+      Users hello</Link>
+*/
+
+
 class Navbar extends Component {
   onLogoutClick(e) {
     e.preventDefault();
@@ -18,62 +26,74 @@ class Navbar extends Component {
 
     const {isAuthenticated, user} = this.props.auth;
 
-    const guestLinks = (
 
-      <nav>
-      <ul className="navbar-nav">
-      <li className="nav-item">
-  
-      <Link to = "/register" className="btn btn-outline-light">Sign Up</Link>
-      <Link to = "/login" className="btn btn-outline-light">Log In</Link>
-   
-      </li>
-      </ul>
-      </nav>
-    );
 
     const authLinks = (
-      <nav>
+   
         <ul className="navbar-nav">
         <li className="nav-item">
-          <Link className="nav-link" to="/dashboard">
+          <Link className="nav-link btn btn-outline-light" to="/dashboard">
             Dashboard
           </Link>
-          <Link className="nav-link" to="/main-quotes">
+          <Link className="nav-link btn btn-outline-light" to="/main-quotes">
             Main Quotes
           </Link>
+
+      
         </li>
         <li className="nav-item">
         {user.name}
         <a href = "" onClick={this.onLogoutClick.bind(this)} className="btn btn-outline-light">
         Logout</a>
-        <Link to = "/profiles"className = "btn btn-outline-light" >
-      {''}
-      Users</Link>
+
+        <Link className="nav-link btn btn-outline-light" to = "/profiles">
+     
+        All Users
+        </Link>
         </li>
-        <li className="nav-item">
-        
-        </li>
+    
 
         </ul>
-        </nav>    
+
+    );
+
+
+    const guestLinks = (
+
+
+      <ul className="navbar-nav">
+      <li className="nav-item">
+  
+      <Link to = "/register" className="nav-link btn btn-outline-light">Sign Up</Link>
+      <Link to = "/login" className="nav-link btn btn-outline-light">Log In</Link>
+   
+      </li>
+      </ul>
+
     );
 
     return (
-    <div>
+
     <nav className="navbar navbar-default fixed-top">
-     <h1 className="cap"><i className="far fa-comment"></i>CleverCap</h1>
-      <ul className="navbar-nav">
+    <div className="container">
+    <Link className="navbar-brand" to="/">
+    <h1 className="cap">
+    <i className="far fa-comment">
+     </i>CleverCap</h1> </Link>
+
+      <ul className="navbar-nav mr-auto">
         <li className="nav-item">
+   
     
       </li>
      
       </ul>
       {isAuthenticated ? authLinks : guestLinks}
       
+
+      </div>
       </nav>
 
-    </div>
   );
 }
 }

@@ -54,7 +54,7 @@ class Dashboard extends Component{
         //user is logged in but has no profile
         dashboardContent = (
             <div>
-                <p className="lead text-muted">
+                <p>
                 Welcome {user.name}
                 </p>
                 <p>Please set up your profile!</p>
