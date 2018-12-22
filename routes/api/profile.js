@@ -43,7 +43,7 @@ router.get('/handle/:handle', (req, res) => {
     const errors = {};
     //match and grab handle from db
     Profile.findOne({ handle: req.params.handle })
-    .populate('user', 'name')
+    .populate('user')
     .then (profile => {
         if(!profile){
             errors.noprofile = 'There is no profile for this user!!';
@@ -63,7 +63,7 @@ router.get('/user/:user_id', (req, res) => {
     const errors = {};
     //match and grab handle from db
     Profile.findOne({ user: req.params.user_id })
-    .populate('user', 'name')
+    .populate('user')
     .then (profile => {
         if(!profile){
             errors.noprofile = 'There is no profile for this user!!';
@@ -85,7 +85,7 @@ router.get('/all', (req, res) => {
     //match and grab handle from db
     Profile.find()
    
-    .populate('user', 'name')
+    .populate('user')
     .then (profiles => {
         if(!profiles){
             errors.noprofile = 'There are no profiles';
@@ -124,7 +124,7 @@ const profileFields = {};
 profileFields.user = req.user.id;
 if(req.body.handle) profileFields.handle = req.body.handle;
 //if(req.body.instagram) profileFields.handle = req.body.instagram;
-if(req.body.bio) profileFields.name = req.body.bio;
+if(req.body.bio) profileFields.bio = req.body.bio;
 
 //social
 profileFields.social = {};
@@ -138,7 +138,7 @@ Profile.findOne({user: req.user.id})
 .then(profile => {
     if(profile){
         //if they have a profile then update
-        Profile.findByIdAndUpdate(
+        Profile.findOneAndUpdate(
             {user: req.user.id},
             {$set: profileFields},
             {new: true}
