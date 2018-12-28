@@ -24,6 +24,7 @@ import './App.css';
 import { clearCurrentProfile } from './actions/profileActions';
 import EditProfile from './components/edit-profile/EditProfile';
 import Profiles from './components/profiles/Profiles';
+import Profile from './components/profile/Profile';
 
 
 import MainQuotes from './components/main-quotes/MainQuotes';
@@ -70,6 +71,7 @@ class App extends Component {
       <Route exact path ="/register" component ={ Register }/>
       <Route exact path ="/login" component ={ Login }/>
       <Route exact path ="/profiles" component ={ Profiles }/>
+      <Route exact path ="/profile/:handle" component ={ Profile }/>
 
       <Switch>
       <PrivateRoute exact path ="/dashboard" component ={ Dashboard }/>
