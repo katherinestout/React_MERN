@@ -23,6 +23,8 @@ import CreateProfile from './components/create-profile/CreateProfile';
 import './App.css';
 import { clearCurrentProfile } from './actions/profileActions';
 import EditProfile from './components/edit-profile/EditProfile';
+import Profiles from './components/profiles/Profiles';
+
 
 import MainQuotes from './components/main-quotes/MainQuotes';
 import MyQuotes from './components/my-quotes/MyQuotes';
@@ -62,10 +64,12 @@ class App extends Component {
       <Router>
       <div className="App">
       <Navbar/>
+
       <Route exact path ="/" component={Landing}/>
       <div className ="container">
       <Route exact path ="/register" component ={ Register }/>
       <Route exact path ="/login" component ={ Login }/>
+      <Route exact path ="/profiles" component ={ Profiles }/>
 
       <Switch>
       <PrivateRoute exact path ="/dashboard" component ={ Dashboard }/>
