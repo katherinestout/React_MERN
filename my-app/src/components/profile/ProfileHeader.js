@@ -10,8 +10,8 @@ class ProfileHeader extends Component {
       <div className="row">
         <div className="col-md-12">
         <h1>{profile.user.name}</h1>
-        <p>{profile.handle}</p>
-        <p>{profile.bio}</p>
+        <p>Username: {profile.handle}</p>
+        <p>About Me:{profile.bio}</p>
      
              <p>
             {isEmpty(profile.social && profile.social.twitter) ? null : (
@@ -31,6 +31,8 @@ class ProfileHeader extends Component {
 
             )}
         </p>
+
+        <p>My Quotes:</p>
         
         </div>
       </div>

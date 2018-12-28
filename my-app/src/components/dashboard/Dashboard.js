@@ -33,11 +33,13 @@ class Dashboard extends Component{
            if(Object.keys(profile).length > 0){
                 dashboardContent = (
                     <div>
-                        <p>Welcome 
-                            
+                        <h2>
+                            Welcome
                         <Link to ={`/profile/${profile.handle}`}>
-                        {user.name}</Link></p>
-                        {profile.handle}
+                        {user.name}</Link></h2>
+
+
+                        Username: {profile.handle}
                         <br></br>
                         {profile.bio}
                         <br></br>
@@ -58,7 +60,7 @@ class Dashboard extends Component{
         dashboardContent = (
             <div>
                 <p>
-                Welcome {user.name}
+               {user.name}
                 </p>
                 <p>Please set up your profile!</p>
                 
@@ -75,7 +77,7 @@ class Dashboard extends Component{
 <div className = "row">
 <div className ="col-md-12">
 
- <h1 className="display-4">Dashboard</h1>
+ <h2 className="display-4">Dashboard</h2>
  
 {dashboardContent}
 </div>

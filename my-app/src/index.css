@@ -17,6 +17,7 @@ body {
 
 .profilecard{
   background-color: skyblue;
+  color: white;
 }
 
 .dashboard{
@@ -52,7 +53,8 @@ body {
 
 .footer{
   text-align: center;
-  background-color: lightskyblue;
+  background-color: skyblue;
+
   padding: 20px;
   position: fixed;
   bottom: 0;

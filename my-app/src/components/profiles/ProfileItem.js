@@ -12,7 +12,7 @@ class ProfileItem extends Component {
       <div className ="card card-body"> 
         <div>
         <p>{profile.user.name}</p>
-        <p>{profile.bio}</p>
+        <p>About Me: {profile.bio}</p>
 
         <p><Link to ={`/profile/${profile.handle}`} 
             className ="btn btn-info">
