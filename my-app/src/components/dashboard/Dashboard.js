@@ -38,8 +38,11 @@ class Dashboard extends Component{
                         <Link to ={`/profile/${profile.handle}`}>
                         {user.name}</Link></p>
                         {profile.handle}
+                        <br></br>
                         {profile.bio}
+                        <br></br>
                         {profile.instagram}
+                        <br></br>
                         {profile.twitter}
 
                         <ProfileActions/>
@@ -58,6 +61,7 @@ class Dashboard extends Component{
                 Welcome {user.name}
                 </p>
                 <p>Please set up your profile!</p>
+                
                 <Link to ="/create-profile" className="btn btn-dark">
                 Create a Profile!
                 </Link>

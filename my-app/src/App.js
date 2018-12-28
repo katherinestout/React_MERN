@@ -25,6 +25,7 @@ import { clearCurrentProfile } from './actions/profileActions';
 import EditProfile from './components/edit-profile/EditProfile';
 
 import MainQuotes from './components/main-quotes/MainQuotes';
+import MyQuotes from './components/my-quotes/MyQuotes';
 
 //check for jwt token
 
@@ -74,6 +75,11 @@ class App extends Component {
       <PrivateRoute exact path ="/main-quotes" 
       component ={ MainQuotes }/>
       </Switch>
+
+      <Switch>
+      <PrivateRoute exact path ="/my-quotes" 
+      component ={ MyQuotes }/>
+      </Switch>
       
       <Switch>
       <PrivateRoute exact path ="/create-profile"
@@ -81,7 +87,8 @@ class App extends Component {
       </Switch>
 
       <Switch>
-      <PrivateRoute exact path ="/edit-profile" component ={ EditProfile }/>
+      <PrivateRoute exact path ="/edit-profile"
+       component ={ EditProfile }/>
       </Switch>
     
       </div>
