@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import ProfileItem from './ProfileItem';
 import {getProfiles} from '../../actions/profileActions';
 
 class Profiles extends Component {
@@ -15,8 +16,11 @@ class Profiles extends Component {
     if(profiles === null || loading) {
         profileItems = <h4>Loading...</h4>;
     } else {
-        if (profiles.length > 0){
-           profileItems = <h1>Profiles HERE</h1>;
+        //mapping through profiles
+        if (profiles.length > 0) {
+            profileItems = profiles.map(profile => (
+              <ProfileItem key={profile._id} profile={profile} />
+            ));
 
         } else {
             profileItems = <h4>No Profiles Found </h4>;

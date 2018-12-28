@@ -91,7 +91,7 @@ export const getProfiles = () => dispatch => {
       .then(res =>
         dispatch({
           type: GET_PROFILES,
-          payload: 'res.data'
+          payload: res.data
         })
       )
       .catch(err =>
