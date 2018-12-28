@@ -1,5 +1,5 @@
 body {
-  
+
   margin-top: 200px;
   margin-bottom: 200px;
   padding: 0;
@@ -7,18 +7,34 @@ body {
 
 }
 
+.landing{
+  text-align: center;
+}
+
+.profile{
+  text-align: center;
+}
+
+.profilecard{
+  background-color: skyblue;
+}
+
+.dashboard{
+  text-align: center;
+}
+
 .heading{
  font-size: 20px;
 }
-
 
 .cap{
   font-family: 'Coiny', cursive;
 }
 
 .navbar-default{
-  background-color: lightskyblue;
+  background-color: skyblue;
   margin-bottom: 200px;
+  padding: 15px;
 }
 
 .landing{
@@ -26,7 +42,7 @@ body {
 }
 
 .jumbotron{
-  background-color: lightskyblue;
+  background-color: skyblue;
   width: 50%;
   border-radius: 70px;
 }
@@ -38,5 +54,7 @@ body {
   text-align: center;
   background-color: lightskyblue;
   padding: 20px;
+  position: fixed;
+  bottom: 0;
 }
 

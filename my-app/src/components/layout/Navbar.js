@@ -62,8 +62,8 @@ class Navbar extends Component {
       <ul className="navbar-nav">
       <li className="nav-item">
   
-      <Link to = "/register" className="nav-link btn btn-outline-light">Sign Up</Link>
-      <Link to = "/login" className="nav-link btn btn-outline-light">Log In</Link>
+      <Link to = "/register" className="btn btn-outline-light">Sign Up</Link>
+      <Link to = "/login" className="btn btn-outline-light">Log In</Link>
    
       </li>
       </ul>
@@ -74,10 +74,10 @@ class Navbar extends Component {
 
     <nav className="navbar navbar-default fixed-top">
     <div className="container">
-    <Link className="navbar-brand" to="/">
+  
     <h1 className="cap">
     <i className="far fa-comment">
-     </i>CleverCap</h1> </Link>
+     </i>CleverCap</h1>
 
       <ul className="navbar-nav mr-auto">
         <li className="nav-item">
