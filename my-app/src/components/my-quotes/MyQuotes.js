@@ -5,7 +5,6 @@ class MainQuotes extends Component {
     return (
       <div>
         <h2>My quotes</h2>
-        <p> asjdhfkjashdfkjas jdfhkjas fkjas</p>
        
       </div>
     )
