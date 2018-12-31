@@ -26,6 +26,7 @@ import EditProfile from './components/edit-profile/EditProfile';
 import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 
+import Posts from './components/posts/Posts';
 
 import MainQuotes from './components/main-quotes/MainQuotes';
 import MyQuotes from './components/my-quotes/MyQuotes';
@@ -95,6 +96,11 @@ class App extends Component {
       <Switch>
       <PrivateRoute exact path ="/edit-profile"
        component ={ EditProfile }/>
+      </Switch>
+
+      <Switch>
+      <PrivateRoute exact path ="/feed"
+       component ={ Posts}/>
       </Switch>
     
       </div>
