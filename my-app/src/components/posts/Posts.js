@@ -22,7 +22,7 @@ class Posts extends Component {
 
         
       </div>
-    )
+    );
   }
 }
 

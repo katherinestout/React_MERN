@@ -11,11 +11,44 @@ constructor(props){
     this.state={
         text: '',
         errors: {}
-    }
+    };
+    this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
 }
 
+//where it does the actual error checking
+//when it shows up on the screen
+componentWillReceiveProps(newProps){
+  if(newProps.errors){
+    this.setState({errors: newProps.errors })
+  } 
+
+}
+
+onSubmit(e){
+  e.preventDefault();
+  //console.log('submit');
+  const {user} = this.props.auth;
+
+  const newPost = {
+    text: this.state.text,
+    name: user.name
+    
+  };
+
+  this.props.addPost(newPost);
+  //clearing the text field
+  this.setState({text: ''});
+} 
+
+onChange(e){
+  this.setState({[e.target.name]: e.target.value});
+}
 
   render() {
+
+    const{errors} = this.state;
+
     return (
       <div className="post-form">
       <div className="card card-info">
@@ -23,11 +56,15 @@ constructor(props){
       Say something...
       </div>
       <div className="card-body">
-      <form>
+      <form onSubmit = {this.onSubmit}>
           <div className="form-group">
-          <textarea placeholder="Create a post!">
-
-          </textarea>
+          <TextAreaFieldGroup
+          placeholder="Create a post!"
+          name="text"
+          value= {this.state.text}
+          onChange={this.onChange}
+          error ={errors.text}
+          />
           </div>
           <button type="submit" className="btn btn-dark">
           Submit
@@ -42,4 +79,16 @@ constructor(props){
   }
 }
 
-export default PostForm;
+PostForm.propTypes = {
+  addPost: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  errors: state.errors,
+  auth: state.auth
+
+});
+
+export default connect(mapStateToProps, {addPost})(PostForm);
