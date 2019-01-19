@@ -8,6 +8,8 @@ import {deletePost,
     removeLike} from '../../actions/postActions';
 import profileReducer from '../../reducers/profileReducer';
 
+import {getProfiles} from '../../actions/profileActions';
+
 
  class PostItem extends Component {
      
@@ -37,7 +39,7 @@ import profileReducer from '../../reducers/profileReducer';
 
 
   render() {
-      const {post, auth} = this.props;
+      const {post, auth, profile} = this.props;
 
 
     return (
@@ -78,7 +80,7 @@ import profileReducer from '../../reducers/profileReducer';
                   <i className="text-secondary fas fa-thumbs-down" />
                 </button>
 
-                <Link to={`/feed`} className="btn btn-info mr-1">
+                <Link to={`/profile/${profile.handle}`} className="btn btn-info mr-1">
                   {post.name}
                 </Link>
 
@@ -106,7 +108,9 @@ PostItem.propTypes = {
     addLike: PropTypes.func.isRequired,
     removeLike: PropTypes.func.isRequired,
     post: PropTypes.object.isRequired,
-    auth: PropTypes.object.isRequired
+    auth: PropTypes.object.isRequired,
+
+    profile: PropTypes.object.isRequired
 }
 
 const mapStateToProps = state => ({
