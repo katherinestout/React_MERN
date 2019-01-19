@@ -4,12 +4,10 @@ import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
 import {setCurrentUser, logoutUser} from './actions/authActions';
 
-
 import { Provider } from 'react-redux';
 import store from './store';
 
 import PrivateRoute from './components/common/PrivateRoute';
-
 
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
@@ -28,11 +26,8 @@ import Profile from './components/profile/Profile';
 
 import Posts from './components/posts/Posts';
 
-import MainQuotes from './components/main-quotes/MainQuotes';
-import MyQuotes from './components/my-quotes/MyQuotes';
 
 //check for jwt token
-
 if(localStorage.jwtToken) {
   //setting auth token header auth
   setAuthToken(localStorage.jwtToken);
@@ -78,15 +73,7 @@ class App extends Component {
       <PrivateRoute exact path ="/dashboard" component ={ Dashboard }/>
       </Switch>
 
-      <Switch>
-      <PrivateRoute exact path ="/main-quotes" 
-      component ={ MainQuotes }/>
-      </Switch>
-
-      <Switch>
-      <PrivateRoute exact path ="/my-quotes" 
-      component ={ MyQuotes }/>
-      </Switch>
+    
       
       <Switch>
       <PrivateRoute exact path ="/create-profile"

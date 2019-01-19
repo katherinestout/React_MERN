@@ -102,8 +102,11 @@ router.post(
           .then(post => {
 //check to see if post is already liked, by length>0
 
-if(post.likes.filter(like => like.user.toString() === req.user.id).length > 0){
-    return res.status(400).json({alreadyliked: 'User has already liked this!'});
+if (
+  post.likes.filter(like => like.user.toString() === req.user.id).length > 0
+  ){
+    return res.status(400)
+    .json({alreadyliked: 'User has already liked this!'});
         }
 //add the user id to the likes array
 post.likes.unshift({user: req.user.id});
@@ -129,8 +132,12 @@ router.post(
           .then(post => {
 //check to see if post is already liked, by length>0
 
-if(post.likes.filter(like => like.user.toString() === req.user.id).length === 0){
-    return res.status(400).json({notliked: 'You have not yet liked this post!'});
+if(
+  post.likes.filter(like => like.user.toString() === req.user.id).length === 0
+  
+  ) {
+    return res
+    .status(400).json({notliked: 'You have not yet liked this post!'});
         }
 //get remove index
 const removeIndex = post.likes

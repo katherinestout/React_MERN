@@ -36,11 +36,9 @@ class Navbar extends Component {
           <Link className="btn btn-outline-light" to="/dashboard">
             Dashboard
           </Link>
-          <Link className=" btn btn-outline-light" to="/main-quotes">
-            Quotes Feed
-          </Link>
+         
           <Link className=" btn btn-outline-light" to="/feed">
-           Post Feed
+           Quotes Feed
           </Link>
     
      
