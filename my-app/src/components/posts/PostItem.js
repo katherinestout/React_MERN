@@ -79,7 +79,8 @@ import {deletePost,
                 </button>
 
                 <Link to={`/profile/${profile.handle}`} className="btn btn-info mr-1">
-                  ${profile.handle}
+                ${this.props.profile.handle}
+         
         
                 </Link>
 
