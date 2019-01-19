@@ -6,9 +6,7 @@ import {Link} from 'react-router-dom';
 import {deletePost, 
     addLike, 
     removeLike} from '../../actions/postActions';
-import profileReducer from '../../reducers/profileReducer';
 
-import {getProfiles} from '../../actions/profileActions';
 
 
  class PostItem extends Component {
@@ -82,6 +80,7 @@ import {getProfiles} from '../../actions/profileActions';
 
                 <Link to={`/profile/${profile.handle}`} className="btn btn-info mr-1">
                   {post.name}
+                 
                 </Link>
 
                 {post.user === auth.user.id ? (
