@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom';
 import {deletePost, 
     addLike, 
     removeLike} from '../../actions/postActions';
+import profileReducer from '../../reducers/profileReducer';
 
 
  class PostItem extends Component {
@@ -78,7 +79,7 @@ import {deletePost,
                 </button>
 
                 <Link to={`/feed`} className="btn btn-info mr-1">
-                  Profile
+                  {post.name}
                 </Link>
 
                 {post.user === auth.user.id ? (
