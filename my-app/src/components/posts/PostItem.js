@@ -7,10 +7,6 @@ import {deletePost,
     addLike, 
     removeLike} from '../../actions/postActions';
 
-    //import {getProfileByHandle} from '../../actions/profileActions';
-
-
-
 
 
  class PostItem extends Component {
@@ -49,9 +45,8 @@ import {deletePost,
         <div className="card card-body mb-3">
         <div className="row">
           <div className="col-md-2">
-            <a href="profile.html">
-             
-            </a>
+          {post._id}
+          
             <br />
             <p className="text-center">{post.name}</p>
           </div>
@@ -82,11 +77,11 @@ import {deletePost,
                   <i className="text-secondary fas fa-thumbs-down" />
                 </button>
 
-                <Link to={`/profile/${profile.handle}`}className="btn btn-info mr-1">
- 
-                <span>{profile.handle}</span>
-  
-         
+                <Link to='/' className="btn btn-info mr-1">
+                {profile.handle}
+          
+                
+             
         
                 </Link>
 
@@ -116,13 +111,11 @@ PostItem.propTypes = {
     post: PropTypes.object.isRequired,
     auth: PropTypes.object.isRequired,
 
-    profile: PropTypes.object.isRequired,
- 
+    profile: PropTypes.object.isRequired
 }
 
 const mapStateToProps = state => ({
-    auth: state.auth,
-    //profile: state.profile
+    auth: state.auth
 });
 
 export default connect(mapStateToProps, {deletePost, addLike, removeLike})(PostItem);

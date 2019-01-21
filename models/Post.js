@@ -14,6 +14,11 @@ const PostSchema = new Schema({
         type: String
         
     },
+    handle: {
+        type: String,
+        required: true,
+        max: 40
+    },
     likes: [
             {
         user: {

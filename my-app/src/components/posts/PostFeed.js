@@ -18,7 +18,7 @@ class PostFeed extends Component {
    const {profile} = this.props.profile;
 
     return posts.map(
-  post => <PostItem key = {post._id} post = {post} profile={profile}/>
+  post => <PostItem key = {post._id} post = {post} profile = {profile}/>
     );
   }
 }
