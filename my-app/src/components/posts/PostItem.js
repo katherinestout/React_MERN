@@ -77,12 +77,8 @@ import {deletePost,
                   <i className="text-secondary fas fa-thumbs-down" />
                 </button>
 
-                <Link to='/' className="btn btn-info mr-1">
-                {profile.handle}
-          
-                
-             
-        
+                <Link to={`/profile/${profile.handle}`} className="btn btn-info mr-1">
+                {profile.user.name}
                 </Link>
 
                 {post.user === auth.user.id ? (

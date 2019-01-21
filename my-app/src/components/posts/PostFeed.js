@@ -14,11 +14,12 @@ class PostFeed extends Component {
     
 
     //destructuring taking the posts out of props
-    const {posts} = this.props;
+  const {posts} = this.props;
    const {profile} = this.props.profile;
 
     return posts.map(
-  post => <PostItem key = {post._id} post = {post} profile = {profile}/>
+  post => <PostItem key = {post._id} post = {post} profile = {profile} 
+ />
     );
   }
 }
