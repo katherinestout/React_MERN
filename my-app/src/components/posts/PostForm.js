@@ -29,10 +29,12 @@ onSubmit(e){
   e.preventDefault();
   //console.log('submit');
   const {user} = this.props.auth;
+ 
 
   const newPost = {
     text: this.state.text,
-    name: user.name
+    name: user.name,
+    
     
   };
 

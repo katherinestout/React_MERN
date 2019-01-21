@@ -78,8 +78,9 @@ import {deletePost,
                   <i className="text-secondary fas fa-thumbs-down" />
                 </button>
 
-                <Link to={`/profile/${profile.handle}`} className="btn btn-info mr-1">
-                {profile.handle}
+                <Link to='/'className="btn btn-info mr-1">
+ 
+                <span>{post.text}</span>
          
         
                 </Link>
@@ -115,7 +116,7 @@ PostItem.propTypes = {
 
 const mapStateToProps = state => ({
     auth: state.auth,
-    profile: state.profile
+    //profile: state.profile
 });
 
 export default connect(mapStateToProps, {deletePost, addLike, removeLike})(PostItem);
