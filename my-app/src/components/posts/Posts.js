@@ -5,7 +5,7 @@ import PostForm from './PostForm';
 import PostFeed from './PostFeed';
 import {getPosts} from '../../actions/postActions';
 
-import {getProfileByHandle} from '../../actions/profileActions';
+//import {getProfileByHandle} from '../../actions/profileActions';
 
 
 
@@ -49,7 +49,7 @@ class Posts extends Component {
 
 Posts.propTypes = {
   getPosts: PropTypes.func.isRequired,
-  getProfileByHandle: PropTypes.func.isRequired,
+  //getProfileByHandle: PropTypes.func.isRequired,
   post: PropTypes.object.isRequired
 };
 
@@ -57,4 +57,4 @@ const mapStateToProps = state => ({
   post: state.post
 });
 
-export default connect(mapStateToProps, { getPosts, getProfileByHandle })(Posts);
+export default connect(mapStateToProps, { getPosts})(Posts);

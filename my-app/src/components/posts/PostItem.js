@@ -7,6 +7,10 @@ import {deletePost,
     addLike, 
     removeLike} from '../../actions/postActions';
 
+    //import {getProfileByHandle} from '../../actions/profileActions';
+
+
+
 
 
  class PostItem extends Component {
@@ -78,9 +82,10 @@ import {deletePost,
                   <i className="text-secondary fas fa-thumbs-down" />
                 </button>
 
-                <Link to='/'className="btn btn-info mr-1">
+                <Link to={`/profile/${profile.handle}`}className="btn btn-info mr-1">
  
-                <span>{post.text}</span>
+                <span>{profile.handle}</span>
+  
          
         
                 </Link>
@@ -111,7 +116,8 @@ PostItem.propTypes = {
     post: PropTypes.object.isRequired,
     auth: PropTypes.object.isRequired,
 
-    profile: PropTypes.object.isRequired
+    profile: PropTypes.object.isRequired,
+ 
 }
 
 const mapStateToProps = state => ({
