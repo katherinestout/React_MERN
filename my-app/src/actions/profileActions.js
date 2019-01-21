@@ -26,7 +26,7 @@ export const getCurrentProfile = () => dispatch => {
         })
       );
   };
-//Create Profile
+
 
 // Create Profile
 export const createProfile = (profileData, history) => dispatch => {
@@ -83,7 +83,7 @@ export const deleteAccount = () => dispatch => {
   };
 
 
-// Delete account & profile
+// Get all profiles
 export const getProfiles = () => dispatch => {
   dispatch(setProfileLoading());
     axios

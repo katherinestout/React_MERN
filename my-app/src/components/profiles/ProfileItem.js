@@ -8,6 +8,7 @@ import {Link} from 'react-router-dom';
 class ProfileItem extends Component {
   render() {
       const{profile} = this.props;
+      
     return (
       <div className ="card card-body"> 
         <div>
