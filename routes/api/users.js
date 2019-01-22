@@ -42,7 +42,8 @@ User.findOne({ email: req.body.email })
 
             name: req.body.name,
             email: req.body.email,
-            password: req.body.password
+            password: req.body.password,
+            handle
 
         });
 //making a password with salt and hash with bcrypt

@@ -8,8 +8,8 @@ const PostSchema = new Schema({
     },
     handle: {
         type: String,
-        required: true,
-        max: 40
+       // required: true,
+       // max: 40
     },
     text: {
         type: String,
@@ -19,10 +19,7 @@ const PostSchema = new Schema({
         type: String
         
     },
-    date: {
-        type: Date,
-        default: Date.now
-    },
+
 
     likes: [
             {

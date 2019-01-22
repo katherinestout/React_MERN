@@ -34,7 +34,7 @@ onSubmit(e){
   const newPost = {
     text: this.state.text,
     name: user.name,
-    handle: user.handle
+    //handle: profile.handle
  
   };
 
@@ -63,7 +63,6 @@ onChange(e){
           <TextAreaFieldGroup
           placeholder="Create a post!"
           name="text"
-          
           value= {this.state.text}
           onChange={this.onChange}
           error ={errors.text}
