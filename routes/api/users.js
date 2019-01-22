@@ -94,7 +94,7 @@ bcrypt.compare(password, user.password).then(isMatch => {
         if(isMatch){
            //user matched
            //jwt payload
-            const payload = { id: user.id, name: user.name};
+            const payload = { id: user.id, name: user.name, handle: user.handle};
 
            //sign token
            //secret key from keys file
