@@ -61,8 +61,11 @@ router.post('/', passport.authenticate('jwt', {session: false}),
        handle: req.body.handle
        //handle: req.params.handle
     });
-    newPost.save().then(post => res.json(post));
-});
+    newPost.save()
+    .then(post => res.json(post));
+
+})
+;
 
 //Delete route
 //DELETE api/posts:id
