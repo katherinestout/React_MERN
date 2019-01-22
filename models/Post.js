@@ -10,6 +10,7 @@ const PostSchema = new Schema({
         type: String,
        // required: true,
        // max: 40
+       ref: 'profile'
     },
     text: {
         type: String,
