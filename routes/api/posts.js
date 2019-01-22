@@ -57,7 +57,7 @@ router.post('/', passport.authenticate('jwt', {session: false}),
         text: req.body.text,
         name: req.body.name,
         user: req.user.id,
-        //handle: req.
+        handle: req.body.handle
     });
     newPost.save().then(post => res.json(post));
 });

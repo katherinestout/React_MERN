@@ -78,6 +78,7 @@ import {deletePost,
                 </button>
 
                 <Link to={`/profile/${post.handle}`} className="btn btn-info mr-1">
+            
                 {post.handle}
                 </Link>
 
