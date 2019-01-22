@@ -37,7 +37,7 @@ import {deletePost,
 
 
   render() {
-      const {post, auth, profile} = this.props;
+      const {post, auth} = this.props;
 
 
     return (
@@ -45,7 +45,7 @@ import {deletePost,
         <div className="card card-body mb-3">
         <div className="row">
           <div className="col-md-2">
-          {post._id}
+        
           
             <br />
             <p className="text-center">{post.name}</p>
@@ -77,8 +77,8 @@ import {deletePost,
                   <i className="text-secondary fas fa-thumbs-down" />
                 </button>
 
-                <Link to={`/profile/${profile.handle}`} className="btn btn-info mr-1">
-                {profile.user.name}
+                <Link to={`/profile/${post.handle}`} className="btn btn-info mr-1">
+                {post.handle}
                 </Link>
 
                 {post.user === auth.user.id ? (
@@ -107,7 +107,7 @@ PostItem.propTypes = {
     post: PropTypes.object.isRequired,
     auth: PropTypes.object.isRequired,
 
-    profile: PropTypes.object.isRequired
+
 }
 
 const mapStateToProps = state => ({

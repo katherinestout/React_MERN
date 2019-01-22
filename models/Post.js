@@ -6,6 +6,11 @@ const PostSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'users'
     },
+    handle: {
+        type: String,
+        required: true,
+        max: 40
+    },
     text: {
         type: String,
         required: true
@@ -13,6 +18,10 @@ const PostSchema = new Schema({
     name:{
         type: String
         
+    },
+    date: {
+        type: Date,
+        default: Date.now
     },
 
     likes: [
