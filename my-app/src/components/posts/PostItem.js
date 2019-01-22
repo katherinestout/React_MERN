@@ -79,8 +79,13 @@ import {deletePost,
 
                 <Link to={`/profile/${post.handle}`} className="btn btn-info mr-1">
             
-                {post.handle}
+               {post.handle}
                 </Link>
+
+                <p><Link to ={`/profile/${post.name}`} 
+            className ="btn btn-info">
+            View Profile
+            </Link></p>
 
                 {post.user === auth.user.id ? (
                   <button
