@@ -27,6 +27,7 @@ import {deletePost,
 
      findUserLike(likes){
          const {auth} = this.props;
+
          if(likes.filter(like => like.user === auth.user.id).length > 0){
             return true;
          } else {
@@ -37,7 +38,7 @@ import {deletePost,
 
 
   render() {
-      const {post, auth} = this.props;
+      const {post, auth, profile} = this.props;
 
 
     return (
@@ -77,9 +78,9 @@ import {deletePost,
                   <i className="text-secondary fas fa-thumbs-down" />
                 </button>
 
-                <Link to={`/profile/${post.handle}`} className="btn btn-info mr-1">
+                <Link to='/' className="btn btn-info mr-1">
             
-               {post.handle}
+         <p>yyet</p>
                 </Link>
 
                 <p><Link to ={`/profile/${post.name}`} 
@@ -113,11 +114,15 @@ PostItem.propTypes = {
     post: PropTypes.object.isRequired,
     auth: PropTypes.object.isRequired,
 
+    profile: PropTypes.object.isRequired
+
 
 }
 
 const mapStateToProps = state => ({
-    auth: state.auth
+    auth: state.auth,
+    //    profile: PropTypes.object.isRequired
+
 });
 
 export default connect(mapStateToProps, {deletePost, addLike, removeLike})(PostItem);

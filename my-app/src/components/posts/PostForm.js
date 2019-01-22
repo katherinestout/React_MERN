@@ -11,6 +11,7 @@ constructor(props){
     this.state={
         text: '',
         errors: {}
+        //profile?
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -27,14 +28,16 @@ componentWillReceiveProps(newProps){
 
 onSubmit(e){
   e.preventDefault();
-  //console.log('submit');
+
   const {user} = this.props.auth;
+
+         //const {profile} = this.props.profile;
  
 
   const newPost = {
     text: this.state.text,
     name: user.name,
-    //handle: profile.handle
+           //handle: profile.handle
  
   };
 
@@ -48,7 +51,7 @@ onChange(e){
 }
 
   render() {
-
+//destructuring
     const{errors} = this.state;
 
     return (
@@ -73,9 +76,7 @@ onChange(e){
           </button>
       </form>
       </div>
-      
       </div> 
-        
       </div>
     )
   }
