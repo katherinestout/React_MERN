@@ -22,7 +22,7 @@ class Posts extends Component {
     //destructuring
     const {posts, loading} = this.props.post;
 
-    const {profile} = this.props;
+   // const {profile} = this.props;
  
     let postContent;
 
@@ -30,7 +30,7 @@ class Posts extends Component {
       postContent = <h4>Loading...</h4>
     } else {
       postContent = <PostFeed posts = {posts} 
-      profile = {profile}
+     // profile = {profile}
     />
 
     }
@@ -60,12 +60,12 @@ Posts.propTypes = {
   //getProfileByHandle: PropTypes.func.isRequired,
   //getProfiles: PropTypes.func.isRequired,
   post: PropTypes.object.isRequired,
-  profile: PropTypes.object.isRequired
+ // profile: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
   post: state.post,
-  profile: state.profile
+  //profile: state.profile
 });
 
 export default connect(mapStateToProps, { getPosts})(Posts);

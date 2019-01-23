@@ -119,8 +119,8 @@ PostItem.propTypes = {
 
 const mapStateToProps = state => ({
     auth: state.auth,
-   // profile: PropTypes.object.isRequired
-    //profile: PropTypes.object.isRequired
+   // profile: PropTypes.object.isRequired nahhhhh
+   
 });
 
 export default connect(mapStateToProps, {deletePost, addLike, removeLike})(PostItem);

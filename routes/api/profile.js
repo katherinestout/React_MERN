@@ -48,12 +48,12 @@ router.get('/handle/:handle', (req, res) => {
         if(!profile){
             errors.noprofile = 'There is no profile for this user!!';
             res.status(404).json(errors);
-            console.log("help");
+            console.log("help no profile");
 
         }
         res.json(profile); 
     }).catch(err => res.status(404).json(err));
-    console.log("helpdddd");
+    console.log("help somethign went wrong");
 
     });
 
