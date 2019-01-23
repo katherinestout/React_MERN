@@ -64,7 +64,7 @@ Posts.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  post: state.post,
+  post: state.post
   //profile: state.profile
 });
 

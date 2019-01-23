@@ -38,7 +38,7 @@ import {deletePost,
 
 
   render() {
-      const {post, auth, profile} = this.props;
+      const {post, auth} = this.props;
 
 
     return (
@@ -78,9 +78,9 @@ import {deletePost,
                   <i className="text-secondary fas fa-thumbs-down" />
                 </button>
 
-                <Link to={`/profile/${profile.handle}`}  className="btn btn-info mr-1">
+                <Link to={`/profile/${post.handle}`}  className="btn btn-info mr-1">
             
-                {profile.handle}
+                Profile
                 </Link>
 
               
@@ -112,7 +112,7 @@ PostItem.propTypes = {
     post: PropTypes.object.isRequired,
     auth: PropTypes.object.isRequired,
 
-    profile: PropTypes.object.isRequired
+  //  profile: PropTypes.object.isRequired
 
 
 }

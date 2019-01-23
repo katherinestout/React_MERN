@@ -15,8 +15,10 @@ email:{
 password:{
     type: String,
     required: true
-
-
+},
+handle: {
+    type: String
+   
 }
 
 });

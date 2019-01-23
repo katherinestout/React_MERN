@@ -31,13 +31,13 @@ onSubmit(e){
 
   const {user} = this.props.auth;
 
-         //const {profile} = this.props.profile;
+         const {profile} = this.props.profile;
  
 
   const newPost = {
     text: this.state.text,
     name: user.name,
-           //handle: profile.handle
+    handle: profile.handle
  
   };
 
@@ -85,12 +85,15 @@ onChange(e){
 PostForm.propTypes = {
   addPost: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
+  profile: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
   errors: state.errors,
-  auth: state.auth
+  auth: state.auth,
+
+  profile: state.profile
 
 });
 

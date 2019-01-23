@@ -14,7 +14,11 @@ const PostSchema = new Schema({
         type: String
         
     },
-
+    handle: {
+        type: String,
+        ref: 'profile'
+      
+    },
 
     likes: [
             {
