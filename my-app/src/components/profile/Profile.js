@@ -5,9 +5,9 @@ import {Link} from 'react-router-dom';
 import ProfileHeader from './ProfileHeader';
 import {getProfileByHandle} from '../../actions/profileActions';
 
-import ProfilePosts from './../profilePosts/ProfilePosts';
 //Get posts and map over them only display if they match the id of the profile? or the handle?
-        import {getPosts} from '../../actions/postActions';
+import {getPosts} from '../../actions/postActions';
+import ProfileFeed from '../profilePosts/ProfileFeed';
 
 
 class Profile extends Component {
@@ -42,8 +42,9 @@ class Profile extends Component {
                     </div>
 
                     <ProfileHeader profile = {profile}/>
+                    <ProfileFeed posts = {posts}/>
             
-                  <ProfilePosts posts= {posts}/>
+              
                 </div>
           )
       }

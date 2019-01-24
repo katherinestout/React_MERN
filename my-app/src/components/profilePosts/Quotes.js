@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 //import PostForm from './PostForm';
-import ProfilePosts from './ProfilePosts';
+import ProfileFeed from './ProfileFeed';
 import {getPosts} from '../../actions/postActions';
-//import Profile from '../profile/Profile';
+
 
 class Quotes extends Component {
 
@@ -22,7 +22,7 @@ class Quotes extends Component {
     if(posts === null || loading) {
       quoteContent = <h4>Loading...</h4>
     } else {
-      quoteContent = <ProfilePosts posts = {posts} 
+      quoteContent = <ProfileFeed posts = {posts} 
     />
 
     }

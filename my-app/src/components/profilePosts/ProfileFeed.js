@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import QuoteItem from './QuoteItem';
 import PropTypes from 'prop-types';
 
-class ProfilePosts extends Component {
+class ProfileFeed extends Component {
 
     render() {
         //destructuring taking the posts out of props
@@ -17,9 +17,9 @@ class ProfilePosts extends Component {
     }
 
 
-    ProfilePosts.propTypes = {
+    ProfileFeed.propTypes = {
         posts: PropTypes.array.isRequired,
     }
     
 
-export default ProfilePosts;
+export default ProfileFeed;
