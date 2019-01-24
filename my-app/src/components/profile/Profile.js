@@ -38,7 +38,7 @@ class Profile extends Component {
                     </div>
 
                     <ProfileHeader profile = {profile}/>
-                    <ProfileAbout/>
+            
 
                 </div>
           )
