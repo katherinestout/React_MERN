@@ -3,9 +3,11 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import ProfileHeader from './ProfileHeader';
-import ProfileAbout from './ProfileAbout';
-
 import {getProfileByHandle} from '../../actions/profileActions';
+
+import ProfilePosts from './../profilePosts/ProfilePosts';
+//Get posts and map over them only display if they match the id of the profile? or the handle?
+        import {getPosts} from '../../actions/postActions';
 
 
 class Profile extends Component {
@@ -20,6 +22,8 @@ class Profile extends Component {
   render() {
       //destucturing
       const {profile, loading} = this.props.profile;
+      const {posts} = this.props.post;
+  
       //initializing profileContent
       let profileContent;
     //check to see if profile is null or loading
@@ -39,7 +43,7 @@ class Profile extends Component {
 
                     <ProfileHeader profile = {profile}/>
             
-
+                  <ProfilePosts posts= {posts}/>
                 </div>
           )
       }
@@ -62,11 +66,15 @@ class Profile extends Component {
 
 Profile.propTypes = {
     getProfileByHandle: PropTypes.func.isRequired,
-    profile: PropTypes.object.isRequired
+    getPosts: PropTypes.func.isRequired,
+    profile: PropTypes.object.isRequired,
+
+    post: PropTypes.object.isRequired
 }
 
 const mapStateToProps = state => ({
-    profile: state.profile
+    profile: state.profile,
+    post: state.post
 })
 
-export default connect(mapStateToProps, {getProfileByHandle})(Profile);
+export default connect(mapStateToProps, {getProfileByHandle, getPosts})(Profile);
