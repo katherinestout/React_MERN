@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import {getPosts} from '../../actions/postActions';
 import QuoteItem from './QuoteItem';
 import PropTypes from 'prop-types';
+import { connect } from 'mongoose';
 
 class ProfileFeed extends Component {
 
@@ -9,14 +10,15 @@ class ProfileFeed extends Component {
         //destructuring taking the posts out of props
         //map through posts passed into postcontent in Posts.js
 
-      const {posts, auth} = this.props;
-     // const {profiles} = this.props.profile;
+      const {posts} = this.props;
+   
+     // const {profile} = this.props.profile;
      
       
 
 
 function filterpost(post){
-  if (post.handle === post.handle){
+  if (post.handle === 'JentheHen'){
     return post;
   }
 }
@@ -27,7 +29,8 @@ console.log(myposts);
           return posts.map(
 
 
-                  post=> <QuoteItem key = {post._id} post = {post}/>
+                  post=> <QuoteItem key = {post._id} post = {post}
+                />
                     );
                     
                   }
@@ -38,7 +41,7 @@ console.log(myposts);
 
     ProfileFeed.propTypes = {
         posts: PropTypes.array.isRequired,
-       // profile: PropTypes.object.isRequired
+      //  profile: PropTypes.object.isRequired
     }
     
 

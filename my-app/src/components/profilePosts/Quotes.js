@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 //import PostForm from './PostForm';
 import ProfileFeed from './ProfileFeed';
 import {getPosts} from '../../actions/postActions';
+//import {getProfiles} from '../../actions/profileActions';
 import './quotesStyle.css';
 
 
@@ -17,12 +18,13 @@ class Quotes extends Component {
   render() {
     //destructuring
     const {posts, loading} = this.props.post;
+    const {profile} = this.props.profile;
  
     let quoteContent;
 
     if(posts === null || loading) {
       quoteContent = <h4>Loading...</h4>
-    } else {
+    } else  {
       quoteContent = <ProfileFeed posts = {posts} 
       profile = {profile}
     />
@@ -56,8 +58,8 @@ Quotes.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  post: state.post,
-//  profile: state.profile
+  post: state.post
+ //profile: state.profile
 });
 
 export default connect(mapStateToProps, {getPosts})(Quotes);
