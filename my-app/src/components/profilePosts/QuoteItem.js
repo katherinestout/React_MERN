@@ -103,6 +103,7 @@ QuoteItem.propTypes = {
     deletePost: PropTypes.func.isRequired,
     addLike: PropTypes.func.isRequired,
     removeLike: PropTypes.func.isRequired,
+   // profile: PropTypes.object.isRequired,
     
     post: PropTypes.object.isRequired,
     auth: PropTypes.object.isRequired,
@@ -111,7 +112,8 @@ QuoteItem.propTypes = {
 
 const mapStateToProps = state => ({
     auth: state.auth,
-   
+ // profile: state.profile
+
 });
 
 export default connect(mapStateToProps, {deletePost, addLike, removeLike})(QuoteItem);
