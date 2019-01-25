@@ -42,9 +42,6 @@ class Profile extends Component {
                     </div>
                     <div className="col-md-6"/>
                     </div>
-            
-                
-
                     <ProfileHeader profile = {profile}/>
                     <ProfileFeed posts = {posts}/>
             
@@ -58,7 +55,7 @@ class Profile extends Component {
 <div className="container">
 <div className="card profilecard">
 <div className="row">
-<div className="col-md-12">
+<div className="col-md-12 profile">
 {profileContent}
 </div>
 </div>

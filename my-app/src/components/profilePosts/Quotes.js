@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 //import PostForm from './PostForm';
 import ProfileFeed from './ProfileFeed';
 import {getPosts} from '../../actions/postActions';
+import './quotesStyle.css';
 
 
 class Quotes extends Component {
@@ -28,7 +29,7 @@ class Quotes extends Component {
     }
 
     return (
-      <div className="feed">
+      <div className="quotefeed">
         <div className="container">
         <div className="row">
         <div className="col-md-12">

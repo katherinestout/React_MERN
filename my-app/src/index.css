@@ -13,12 +13,14 @@ body {
 
 .profile{
   text-align: center;
+  color: white;
 }
 
 .profilecard{
   background-color: skyblue;
  
 }
+
 
 .dashboard{
   text-align: center;

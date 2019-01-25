@@ -7,6 +7,8 @@ import {deletePost,
     addLike, 
     removeLike} from '../../actions/postActions';
 
+import './quote.css';
+
 
  class QuoteItem extends Component {
      
@@ -42,7 +44,7 @@ import {deletePost,
 
     return (
       <div>
-        <div className="card card-body mb-3">
+        <div className="card card-body mb-3 quoteitem">
         <div className="row">
           <div className="col-md-2">
         
