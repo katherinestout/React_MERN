@@ -9,14 +9,14 @@ class ProfileFeed extends Component {
         //destructuring taking the posts out of props
         //map through posts passed into postcontent in Posts.js
 
-      const {posts, profile} = this.props;
+      const {posts, auth} = this.props;
      // const {profiles} = this.props.profile;
      
       
 
 
-function filterpost(post, profile){
-  if (post.name === profile.name){
+function filterpost(post){
+  if (post.handle === post.handle){
     return post;
   }
 }
@@ -25,7 +25,8 @@ console.log(myposts);
 
 
           return posts.map(
-        
+
+
                   post=> <QuoteItem key = {post._id} post = {post}/>
                     );
                     
@@ -37,7 +38,7 @@ console.log(myposts);
 
     ProfileFeed.propTypes = {
         posts: PropTypes.array.isRequired,
-        profile: PropTypes.array.isRequired
+       // profile: PropTypes.object.isRequired
     }
     
 

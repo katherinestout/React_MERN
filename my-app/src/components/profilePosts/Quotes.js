@@ -24,6 +24,7 @@ class Quotes extends Component {
       quoteContent = <h4>Loading...</h4>
     } else {
       quoteContent = <ProfileFeed posts = {posts} 
+      profile = {profile}
     />
 
     }
@@ -50,11 +51,13 @@ class Quotes extends Component {
 Quotes.propTypes = {
   getPosts: PropTypes.func.isRequired,
   post: PropTypes.object.isRequired,
+ // profile: PropTypes.object.isRequired
 
 };
 
 const mapStateToProps = state => ({
-  post: state.post
+  post: state.post,
+//  profile: state.profile
 });
 
 export default connect(mapStateToProps, {getPosts})(Quotes);
