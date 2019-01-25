@@ -26,7 +26,7 @@ const myposts = posts.filter(filterpost);
 console.log(myposts);
 
 
-          return posts.map(
+          return myposts.map(
 
 
                   post=> <QuoteItem key = {post._id} post = {post}
