@@ -17,18 +17,16 @@ class ProfileFeed extends Component {
       
 
 
+
+
 function filterpost(post){
-  if (post.handle === 'JentheHen'){
-    return post;
+  if (post.handle === 'KateTheGreat'){
+    return posts;
   }
 }
 const myposts = posts.filter(filterpost);
 console.log(myposts);
-
-
           return myposts.map(
-
-
                   post=> <QuoteItem key = {post._id} post = {post}
                 />
                     );
