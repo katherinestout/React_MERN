@@ -1,4 +1,5 @@
-module.exports = {
-    mongoURI: 'mongodb://katkat:katkat1@ds125862.mlab.com:25862/katconnector',
-    secretOrKey: 'secret'
-};
+if(process.eventNames.NODE_ENV === 'production'){
+    module.exports = require('./keys_prod');
+} else {
+    module.exports = require('./keys_dev');
+}
