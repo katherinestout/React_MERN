@@ -6,13 +6,6 @@ import {logoutUser} from '../../actions/authActions';
 import {clearCurrentProfile} from '../../actions/profileActions';
 
 
-/* 
-
-        <Link to = "/profiles"className = "btn btn-outline-light" >
-      {''}
-      Users hello</Link>
-*/
-
 
 class Navbar extends Component {
   onLogoutClick(e) {

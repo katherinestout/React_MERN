@@ -32,14 +32,15 @@ class Dashboard extends Component{
        //if it is greater than 0 than that means there is already a profile created
            if(Object.keys(profile).length > 0){
                 dashboardContent = (
+                    <div className="card card-body mb-3 dashboardcard">
                     <div>
                         <h2>
-                            Welcome
-                        <Link to ={`/profile/${profile.handle}`}>
+                            Welcome, 
+                        <Link to ={`/profile/${profile.handle}`} style={{ textDecoration: 'none', paddingLeft: 10 }} >
                         {user.name}</Link></h2>
 
 
-                        Username: {profile.handle}
+                    {profile.handle}
                         <br></br>
                         {profile.bio}
                         <br></br>
@@ -51,9 +52,9 @@ class Dashboard extends Component{
 
                       
                         <button onClick={this.onDeleteClick.bind(this)} 
-                        className="btn btn-danger">
+                        className="btn btn-light">
                         Delete Account</button>
-                    </div>
+                    </div> </div>
                 );
            } else {
         //user is logged in but has no profile
@@ -68,6 +69,7 @@ class Dashboard extends Component{
                 Create a Profile!
                 </Link>
             </div>
+            
         );
            }
         }
@@ -77,7 +79,7 @@ class Dashboard extends Component{
 <div className = "row">
 <div className ="col-md-12">
 
- <h2 className="display-4">Dashboard</h2>
+
  
 {dashboardContent}
 </div>
@@ -100,7 +102,7 @@ Dashboard.propTypes = {
     auth: PropTypes.object.isRequired,
     profile: PropTypes.object.isRequired
 }
-//Bring in proptypes
+
 const mapStateToProps = state => ({
     profile: state.profile,
     auth: state.auth

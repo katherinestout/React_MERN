@@ -13,16 +13,20 @@ class ProfileFeed extends Component {
    
       const {profile} = this.props.profile;
      
-      
+
+//filtering through all posts and matching them to the current profile's handle
+//putting them in myposts
 function filterpost(post){
   if (post.handle === profile.handle){
     return posts;
   }
 }
-const myposts = posts.filter(filterpost);
-console.log(myposts);
 
-          return myposts.map(
+const myPosts = posts.filter(filterpost);
+
+//mapping through all of the posts that belong to the current user
+
+          return myPosts.map(
                   post=> <QuoteItem key = {post._id} post = {post}
                   profile = {profile}
                 />

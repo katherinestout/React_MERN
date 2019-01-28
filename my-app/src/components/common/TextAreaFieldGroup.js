@@ -37,7 +37,7 @@ const TextAreaFieldGroup = ({
         </div>
     );
 };
-//Add all the textfieldgroup to proptypes
+
 
 TextAreaFieldGroup.propTypes = {
     name: PropTypes.string.isRequired,

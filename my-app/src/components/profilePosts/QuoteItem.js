@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import classnames from 'classnames';
-//import {Link} from 'react-router-dom';
 import {deletePost, 
     addLike, 
     removeLike} from '../../actions/postActions';
@@ -40,7 +39,6 @@ import './quote.css';
 
   render() {
       const {post, auth} = this.props;
-    //  const {profile} = this.props.profile;
 
 
     return (
@@ -50,11 +48,12 @@ import './quote.css';
           <div className="col-md-2">
         
           
-            <br />
+       
            
           </div>
           <div className="col-md-10">
-            <p className="lead">{post.text}</p>
+            <p className="lead">{post.text}         
+                </p>
 
             
                 <button
@@ -90,8 +89,7 @@ import './quote.css';
                     <i className="fas fa-times" />
                   </button>
                 ) : null}
-                
-      
+       
           </div>
         </div>
       </div>
@@ -104,8 +102,6 @@ QuoteItem.propTypes = {
     deletePost: PropTypes.func.isRequired,
     addLike: PropTypes.func.isRequired,
     removeLike: PropTypes.func.isRequired,
-   // profile: PropTypes.object.isRequired,
-    
     post: PropTypes.object.isRequired,
     auth: PropTypes.object.isRequired,
 
@@ -113,7 +109,6 @@ QuoteItem.propTypes = {
 
 const mapStateToProps = state => ({
     auth: state.auth,
-  //profile: state.profile
 
 });
 

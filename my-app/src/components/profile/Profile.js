@@ -4,10 +4,6 @@ import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import ProfileHeader from './ProfileHeader';
 import {getProfileByHandle} from '../../actions/profileActions';
-
-//import PostForm from './../posts/PostForm';
-
-//Get posts and map over them only display if they match the id of the profile? or the handle?
 import {getPosts} from '../../actions/postActions';
 import ProfileFeed from '../profilePosts/ProfileFeed';
 
@@ -70,7 +66,6 @@ Profile.propTypes = {
     getProfileByHandle: PropTypes.func.isRequired,
     getPosts: PropTypes.func.isRequired,
     profile: PropTypes.object.isRequired,
-
     post: PropTypes.object.isRequired
 }
 

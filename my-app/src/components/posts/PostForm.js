@@ -11,7 +11,6 @@ constructor(props){
     this.state={
         text: '',
         errors: {}
-        //profile?
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);

@@ -1,6 +1,7 @@
 .quoteitem{
     color: black;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 20px;
     text-align: left;
+    background: whitesmoke;
+    
 }

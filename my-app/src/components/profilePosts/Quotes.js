@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-//import PostForm from './PostForm';
 import ProfileFeed from './ProfileFeed';
 import {getPosts} from '../../actions/postActions';
-//import {getProfiles} from '../../actions/profileActions';
 import './quotesStyle.css';
 
 
@@ -16,11 +14,13 @@ class Quotes extends Component {
   }
 
   render() {
+
     //destructuring
     const {posts, loading} = this.props.post;
     const {profile} = this.props;
  
     let quoteContent;
+
 
     if(posts === null || loading) {
       quoteContent = <h4>Loading...</h4>

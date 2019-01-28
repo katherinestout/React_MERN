@@ -13,7 +13,7 @@ body {
 
 .profile{
   text-align: center;
-  color: white;
+
 }
 
 .profilecard{
@@ -24,6 +24,12 @@ body {
 
 .dashboard{
   text-align: center;
+
+}
+
+.dashboardcard {
+  background: skyblue;
+  
 }
 
 .heading{
