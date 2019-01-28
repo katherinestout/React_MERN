@@ -9,13 +9,13 @@ class ProfileFeed extends Component {
         //destructuring taking the posts out of props
         //map through posts passed into postcontent in Posts.js
 
-      const {posts, profile} = this.props;
+      const {posts} = this.props;
    
-      //const {profile} = this.props.profile;
+      const {profile} = this.props.profile;
      
       
 function filterpost(post){
-  if (post.handle === 'KateTheGreat'){
+  if (post.handle === profile.handle){
     return posts;
   }
 }
