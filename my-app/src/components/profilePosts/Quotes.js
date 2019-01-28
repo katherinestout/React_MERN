@@ -18,7 +18,7 @@ class Quotes extends Component {
   render() {
     //destructuring
     const {posts, loading} = this.props.post;
-    const {profile} = this.props.profile;
+    const {profile} = this.props;
  
     let quoteContent;
 
@@ -53,13 +53,13 @@ class Quotes extends Component {
 Quotes.propTypes = {
   getPosts: PropTypes.func.isRequired,
   post: PropTypes.object.isRequired,
- // profile: PropTypes.object.isRequired
+  profile: PropTypes.object.isRequired
 
 };
 
 const mapStateToProps = state => ({
-  post: state.post
- //profile: state.profile
+  post: state.post,
+ profile: state.profile
 });
 
 export default connect(mapStateToProps, {getPosts})(Quotes);

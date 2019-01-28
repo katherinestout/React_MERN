@@ -40,6 +40,7 @@ import './quote.css';
 
   render() {
       const {post, auth} = this.props;
+    //  const {profile} = this.props.profile;
 
 
     return (
@@ -50,7 +51,7 @@ import './quote.css';
         
           
             <br />
-            <p className="text-center">{post.name}</p>
+           
           </div>
           <div className="col-md-10">
             <p className="lead">{post.text}</p>
@@ -103,7 +104,7 @@ QuoteItem.propTypes = {
     deletePost: PropTypes.func.isRequired,
     addLike: PropTypes.func.isRequired,
     removeLike: PropTypes.func.isRequired,
-    //profile: PropTypes.object.isRequired,
+   // profile: PropTypes.object.isRequired,
     
     post: PropTypes.object.isRequired,
     auth: PropTypes.object.isRequired,
@@ -111,8 +112,8 @@ QuoteItem.propTypes = {
 }
 
 const mapStateToProps = state => ({
-    auth: state.auth
- // profile: state.profile
+    auth: state.auth,
+  //profile: state.profile
 
 });
 
