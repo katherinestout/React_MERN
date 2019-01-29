@@ -33,7 +33,7 @@ class Profiles extends Component {
           <div className="row">
           <div className="col-md-12">
           <h1>All of the Clever Cap Profiles! </h1>
-          <p>
+          <p className="cap">
               Browse and connect with other quote lovers.
           </p>
           {profileItems}

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {getCurrentProfile, deleteAccount} from '../../actions/profileActions';
 import ProfileActions from './ProfileActions';
+import isEmpty from './../../validation/is-empty';
 
 class Dashboard extends Component{
     componentDidMount() {
@@ -42,11 +43,25 @@ class Dashboard extends Component{
 
                     {profile.handle}
                         <br></br>
-                        {profile.bio}
-                        <br></br>
-                        {profile.instagram}
-                        <br></br>
-                        {profile.twitter}
+                       <p className="cap"> {profile.bio} </p>
+               
+                       <p>
+            {isEmpty(profile.social && profile.social.twitter) ? null : (
+                    <a href = {profile.social.twitter}>
+
+                    <i className="fab fa-twitter" ></i>
+                    </a>
+
+            )}
+    
+            {isEmpty(profile.social && profile.social.instagram) ? null : (
+                    <a href = {profile.social.instagram}>
+
+                    <i className="fab fa-instagram" style={{ paddingLeft: 10 }}></i>
+                    </a>
+
+            )}
+        </p>
 
                         <ProfileActions/>
 

@@ -9,7 +9,7 @@ class ProfileHeader extends Component {
     return (
       <div className="row">
         <div className="col-md-12">
-        <h1>{profile.user.name}</h1>
+        <h1 className="cap">{profile.user.name}</h1>
         <p> {profile.handle}</p> 
         <p>{profile.bio}</p>
      
@@ -17,16 +17,15 @@ class ProfileHeader extends Component {
             {isEmpty(profile.social && profile.social.twitter) ? null : (
                     <a href = {profile.social.twitter}>
 
-                    <i className="fab fa-twitter"></i>
+                    <i className="fab fa-twitter" ></i>
                     </a>
 
             )}
-        </p>
-        <p>
+    
             {isEmpty(profile.social && profile.social.instagram) ? null : (
                     <a href = {profile.social.instagram}>
 
-                    <i className="fab fa-instagram"></i>
+                    <i className="fab fa-instagram" style={{ paddingLeft: 10 }}></i>
                     </a>
 
             )}
