@@ -32,7 +32,7 @@ class ProfileHeader extends Component {
             )}
         </p>
 
-        <p>My Quotes:</p>
+        <p className="cap">My Quotes:</p>
         
         </div>
       </div>

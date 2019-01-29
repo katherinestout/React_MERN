@@ -52,7 +52,7 @@ import './quote.css';
            
           </div>
           <div className="col-md-10">
-            <p className="lead">{post.text}         
+            <p className="lead cap">{post.text}         
                 </p>
 
             

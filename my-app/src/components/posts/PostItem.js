@@ -48,10 +48,10 @@ import {deletePost,
         
           
             <br />
-            <p className="text-center">{post.name}</p>
+            <p className="text-center">{post.handle}</p>
           </div>
           <div className="col-md-10">
-            <p className="lead">{post.text}</p>
+            <p className="lead cap">{post.text}</p>
 
             
                 <button

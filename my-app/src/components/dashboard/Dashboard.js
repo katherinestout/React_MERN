@@ -34,7 +34,7 @@ class Dashboard extends Component{
                 dashboardContent = (
                     <div className="card card-body mb-3 dashboardcard">
                     <div>
-                        <h2>
+                        <h2 className="cap">
                             Welcome, 
                         <Link to ={`/profile/${profile.handle}`} style={{ textDecoration: 'none', paddingLeft: 10 }} >
                         {user.name}</Link></h2>
