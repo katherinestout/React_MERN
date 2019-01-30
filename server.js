@@ -37,11 +37,11 @@ app.use('/api/posts', posts);
 //Check to see if on server, on heroku
 if(process.env.NODE_ENV === 'production'){
     //set a static folder
-    app.use(express.static('client/build'));
+    app.use(express.static('my-app/build'));
     //route
     //for any route that gets hit we're going to load the react index.html file
     app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+        res.sendFile(path.resolve(__dirname, 'my-app', 'build', 'index.html'));
     });
 }
 
