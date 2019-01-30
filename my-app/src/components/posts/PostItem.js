@@ -48,9 +48,12 @@ import {deletePost,
         
           
             <br />
-            <Link to={`/profile/${post.handle}`}>
-            <button className="text-center handle-button button cap" type="button">{post.handle}</button>
+
+            <p className="text-center handle-button btn cap">
+            <Link to={`/profile/${post.handle}`}style={{textDecoration: 'none', color:'black'}}  >
+           {post.handle}
             </Link>
+            </p>
 
           </div>
           <div className="col-md-10">

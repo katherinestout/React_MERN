@@ -15,13 +15,17 @@ class ProfileItem extends Component {
         <p className="cap">{profile.user.name}</p>
         <p>About Me: {profile.bio}
 
+   
 
-        <Link to ={`/profile/${profile.handle}`} 
-            >
-          <button className="text-center handle-button-profile button cap" type="button"> 
-        
+      
+            
+          <p className="text-center handle-button-profile btn cap"> 
+          <Link to ={`/profile/${profile.handle}`} style={{textDecoration: 'none', color:'black'}} >
             View Profile
-         </button>   </Link>
+            </Link>
+         </p>   
+         
+         
          </p>
         </div>
       </div>

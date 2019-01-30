@@ -63,6 +63,7 @@ body {
   border-radius: 70%;
   padding: 15px;
   background-color: skyblue;
+  text-decoration: none;
 
 }
 
@@ -71,6 +72,7 @@ body {
   padding: 15px;
   background-color: skyblue;
   margin-left: 10px;
+  text-decoration: none;
 
 }
 
