@@ -11,14 +11,18 @@ class ProfileItem extends Component {
       
     return (
       <div className ="card card-body"> 
-        <div>
+        <div className="profiles-body">
         <p className="cap">{profile.user.name}</p>
-        <p>About Me: {profile.bio}</p>
+        <p>About Me: {profile.bio}
 
-        <p><Link to ={`/profile/${profile.handle}`} 
-            className ="btn btn-info">
+
+        <Link to ={`/profile/${profile.handle}`} 
+            >
+          <button className="text-center handle-button-profile button cap" type="button"> 
+        
             View Profile
-            </Link></p>
+         </button>   </Link>
+         </p>
         </div>
       </div>
     )

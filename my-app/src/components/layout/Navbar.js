@@ -68,9 +68,9 @@ class Navbar extends Component {
     <nav className="navbar navbar-default fixed-top">
     <div className="container">
   
-    <h1 className="cap">
+    <Link to="/dashboard" style={{ textDecoration: 'none', color: 'black'}}> <h1 className="cap">
     <i className="far fa-comment">
-     </i>CleverCap</h1>
+     </i>CleverCap</h1></Link>
 
       <ul className="navbar-nav mr-auto">
         <li className="nav-item">

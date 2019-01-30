@@ -10,8 +10,8 @@ class ProfileHeader extends Component {
       <div className="row">
         <div className="col-md-12">
         <h1 className="cap">{profile.user.name}</h1>
-        <p> {profile.handle}</p> 
-        <p>{profile.bio}</p>
+        <h3> {profile.handle}</h3> 
+        <h5> <i>{profile.bio}</i></h5>
      
              <p>
             {isEmpty(profile.social && profile.social.twitter) ? null : (

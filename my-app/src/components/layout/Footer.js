@@ -10,7 +10,7 @@ export default class Footer extends Component {
 <footer className="fixed-bottom footer">
 <div className="container">
 <a href="https://www.github.com/katherinestout"
-className="btn btn-outline-dark"> 
+ style={{ textDecoration: 'none', color: 'whitesmoke'}}> 
  <i className="fab fa-github"></i>
  
 

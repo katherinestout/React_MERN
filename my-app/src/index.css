@@ -59,6 +59,25 @@ body {
   margin: 5px;
 }
 
+.handle-button{
+  border-radius: 70%;
+  padding: 15px;
+  background-color: skyblue;
+
+}
+
+.handle-button-profile{
+  border-radius: 70%;
+  padding: 15px;
+  background-color: skyblue;
+  margin-left: 10px;
+
+}
+
+.profiles-body{
+  margin-left: 40px;
+}
+
 .footer{
   text-align: center;
   background-color: skyblue;

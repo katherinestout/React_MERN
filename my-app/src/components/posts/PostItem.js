@@ -48,10 +48,13 @@ import {deletePost,
         
           
             <br />
-            <p className="text-center">{post.handle}</p>
+            <Link to={`/profile/${post.handle}`}>
+            <button className="text-center handle-button button cap" type="button">{post.handle}</button>
+            </Link>
+
           </div>
           <div className="col-md-10">
-            <p className="lead cap">{post.text}</p>
+            <p className="lead"> <i>{post.text}</i></p>
 
             
                 <button
@@ -76,13 +79,6 @@ import {deletePost,
                 >
                   <i className="text-secondary fas fa-thumbs-down" />
                 </button>
-
-                <Link to={`/profile/${post.handle}`}  className="btn btn-info mr-1">
-            
-                View Profile
-                </Link>
-
-              
 
                 {post.user === auth.user.id ? (
                   <button

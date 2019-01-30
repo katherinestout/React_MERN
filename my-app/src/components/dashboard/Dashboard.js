@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {getCurrentProfile, deleteAccount} from '../../actions/profileActions';
-import ProfileActions from './ProfileActions';
+//import ProfileActions from './ProfileActions';
 import isEmpty from './../../validation/is-empty';
 
 class Dashboard extends Component{
@@ -36,14 +36,14 @@ class Dashboard extends Component{
                     <div className="card card-body mb-3 dashboardcard">
                     <div>
                         <h2 className="cap">
-                            Welcome, 
-                        <Link to ={`/profile/${profile.handle}`} style={{ textDecoration: 'none', paddingLeft: 10 }} >
-                        {user.name}</Link></h2>
+                            Welcome to CleverCap, 
+                        <Link to ={`/profile/${profile.handle}`} style={{ textDecoration: 'none', paddingLeft: 10, color: 'black' }} >
+                        {user.name}</Link>!</h2>
 
 
-                    {profile.handle}
+                  <h4>Also known as: {profile.handle}</h4>  
                         <br></br>
-                       <p className="cap"> {profile.bio} </p>
+                       <h5 className="cap"><i> {profile.bio} </i></h5>
                
                        <p>
             {isEmpty(profile.social && profile.social.twitter) ? null : (
@@ -62,13 +62,19 @@ class Dashboard extends Component{
 
             )}
         </p>
+                    
+                    
 
-                        <ProfileActions/>
-
-                      
+                        <Link to ={`/profile/${profile.handle}`} 
+                        className="btn btn-light" 
+                        style={{ textDecoration: 'none', paddingLeft: 10, color: 'black' }} >
+                        View Profile</Link>
+                        <Link to ="/edit-profile" className="btn btn-dark">Edit Profile</Link>
+                      <br></br>
                         <button onClick={this.onDeleteClick.bind(this)} 
-                        className="btn btn-light">
+                        className="btn btn-light" style={{float: 'left'}}>
                         Delete Account</button>
+                   
                     </div> </div>
                 );
            } else {
@@ -78,7 +84,7 @@ class Dashboard extends Component{
                 <p>
                {user.name}
                 </p>
-                <p>Please set up your profile!</p>
+                <p>Welcome to CleverCap! To get started, please set up your profile!</p>
                 
                 <Link to ="/create-profile" className="btn btn-dark">
                 Create a Profile!

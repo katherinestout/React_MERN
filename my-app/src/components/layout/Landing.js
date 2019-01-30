@@ -11,19 +11,18 @@ import {connect} from 'react-redux';
         <div className="row">
         <div className="col-sm-12">
         <h2 className="cap"> Welcome to CleverCap </h2>
+        <p>Discover Unique Captions for Instagram!</p>
+        <p>To get started:</p>
         </div>
        </div>
        <div className="row">
-       <div className="col-sm-12">
-       <h3>Generate Unique Captions<br></br> for Instagram!</h3>
-       </div>
        </div>
        <div className="row">
        <div className="col-sm-12">
 
-    <Link to = "/register" className="btn btn-outline-light">Sign Up</Link>
+    <Link to = "/register" className="btn btn-light">Sign Up</Link>
 
-    <Link to = "/login" className="btn btn-outline-light">Log In</Link>
+    <Link to = "/login" className="btn btn-light">Log In</Link>
       </div>
       </div>
       </div>
@@ -32,7 +31,7 @@ import {connect} from 'react-redux';
   };
 };
 
-//add proptypes
+
 Landing.propTypes = {
   auth: PropTypes.object.isRequired
 }

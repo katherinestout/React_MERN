@@ -55,15 +55,15 @@ onChange(e){
 
     return (
       <div className="post-form">
-      <div className="card card-info">
-      <div className="card-header">
-      Say something...
+      <div className="card" style = {{background: "skyblue", margin: 10 }}>
+      <div className="card-header cap">
+      What's your favorite quote?
       </div>
       <div className="card-body">
       <form onSubmit = {this.onSubmit}>
           <div className="form-group">
           <TextAreaFieldGroup
-          placeholder="Create a post!"
+          placeholder="Create a quote post!"
           name="text"
           value= {this.state.text}
           onChange={this.onChange}
