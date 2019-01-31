@@ -22,7 +22,7 @@ This project was built with the help of "MERN Stack Front To Back" by Brad Trave
 https://www.udemy.com/mern-stack-front-to-back/
 
 
-Although the foundation was built with the course, I have made it into my own with added features. 
+Although the foundation was built with the course, I have made it my own creation with added features, different functionality, different design, and different concepts. 
 
 
 
