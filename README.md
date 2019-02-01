@@ -9,7 +9,10 @@ This is a sample account:
 
 <img width="568" alt="loginsean" src="https://user-images.githubusercontent.com/39039142/52144051-23f1a900-262b-11e9-9f4d-28ecfc2fee25.png">
 
+
 To get started, users can create their profile.
+
+
 <img width="499" alt="createprofile" src="https://user-images.githubusercontent.com/39039142/52144060-294ef380-262b-11e9-85db-cd113e2a9821.png">
 
 Users can continually update their profile. Users are required to have a username. They can additionally add a short bio, as well as their Instagram and Twitter links.
