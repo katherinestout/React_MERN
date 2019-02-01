@@ -4,6 +4,8 @@ CleverCap is a social network, designed for Instagram users looking to find the 
 
 Full Deployed Version on Heroku: https://damp-mountain-40245.herokuapp.com
 
+<img width="1153" alt="clevercap" src="https://user-images.githubusercontent.com/39039142/52142968-4cc46f00-2628-11e9-93a5-2782ea34c8b7.png">
+
 
 ## Built With
 Node.js, Express, React, Redux & MongoDB
