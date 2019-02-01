@@ -24,7 +24,7 @@ Users can view their profile as well as other's profiles by handle. Quote posts,
 
 <img width="1265" alt="profileprofile" src="https://user-images.githubusercontent.com/39039142/52144162-7f239b80-262b-11e9-9a2b-a2b594ef0ce8.png">
 
-Users can also view all other quote users by going to the all profiles tab.
+Users can also view all other quote users by going to the all users tab.
 
 <img width="1212" alt="allprofiles" src="https://user-images.githubusercontent.com/39039142/52144183-8ea2e480-262b-11e9-90a0-13bb979898e1.png">
 
