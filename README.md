@@ -12,7 +12,7 @@ This is a sample account:
 To get started, users can create their profile.
 <img width="499" alt="createprofile" src="https://user-images.githubusercontent.com/39039142/52144060-294ef380-262b-11e9-85db-cd113e2a9821.png">
 
-Users can continually update their profile. Users are required to have a bio and username. They can additionally add their Instagram and Twitter links.
+Users can continually update their profile. Users are required to have a username. They can additionally add a short bio, as well as their Instagram and Twitter links.
 
 <img width="873" alt="creatingprofile" src="https://user-images.githubusercontent.com/39039142/52144064-2c49e400-262b-11e9-86a8-4f5512703e91.png">
 
